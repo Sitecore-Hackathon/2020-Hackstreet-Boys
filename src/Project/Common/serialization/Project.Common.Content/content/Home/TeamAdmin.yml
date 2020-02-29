@@ -52,12 +52,17 @@ Languages:
               s:par=""
               s:ph="/header/menu" />
             <r
-              uid="{81615E60-91D1-4922-871B-31AF3BB7998D}"
+              uid="{9E44DF97-F02D-489A-9E32-BFFC402859AD}"
               p:after="r[@uid='{C2036692-A15D-4FA4-8CC4-56E23CC60720}']"
+              s:id="{9CAD1A1F-6D13-4887-AFC0-14C1EA53EED5}"
+              s:ph="content" />
+            <r
+              uid="{81615E60-91D1-4922-871B-31AF3BB7998D}"
+              p:after="r[@uid='{9E44DF97-F02D-489A-9E32-BFFC402859AD}']"
               s:ds="{5586A139-37BB-4228-99EC-9AA4E8B525EE}"
               s:id="{A818D445-630B-4A7D-B3A6-BDC0DA1CAD59}"
               s:par=""
-              s:ph="content" />
+              s:ph="/content/inner" />
           </d>
         </r>
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"

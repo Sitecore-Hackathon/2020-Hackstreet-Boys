@@ -33,3 +33,9 @@
 .team-info .team-name {
     color: white;
 }
+
+
+.form-group .btn[type='submit']
+{
+    margin-top: 1em; 
+}

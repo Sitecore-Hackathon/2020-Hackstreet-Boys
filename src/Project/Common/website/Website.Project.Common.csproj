@@ -119,6 +119,7 @@
     <Content Include="assets\fonts\icomoon\icomoon\selection.json" />
     <Content Include="App_Config\Include\Project\Project.Common.Serialization.config" />
     <Content Include="Views\web.config" />
+    <Content Include="Views\Common\Container.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

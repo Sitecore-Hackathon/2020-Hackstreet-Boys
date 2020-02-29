@@ -1,0 +1,23 @@
+﻿---
+ID: "e43238a8-c3a0-4508-8def-ff9e1c6db1f8"
+Parent: "57ba4857-032f-493a-84fa-5abae61242da"
+Template: "d7becce1-0db0-498c-95e3-4ad0cb2ea10f"
+Path: /sitecore/content/Home/Login/Register Link Section
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200229T160935Z
+    - ID: "3cb1d15e-ba95-4e10-9444-d65d67f45210"
+      Hint: Text Content
+      Value: |
+        <p>Not registered?</p>
+        <p><a href="~/link.aspx?_id=2B6088CC2DE749A6A657769537BF0FE6&amp;_z=z">Create a user.</a></p>
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin

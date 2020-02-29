@@ -52,12 +52,24 @@ Languages:
               s:par=""
               s:ph="/header/menu" />
             <r
-              uid="{81615E60-91D1-4922-871B-31AF3BB7998D}"
+              uid="{D8FEFF25-13B8-4249-BA38-AF0495E06839}"
               p:after="r[@uid='{FC90CA18-E4C1-4D84-8B4A-C38B7752112C}']"
+              s:id="{9CAD1A1F-6D13-4887-AFC0-14C1EA53EED5}"
+              s:ph="content" />
+            <r
+              uid="{81615E60-91D1-4922-871B-31AF3BB7998D}"
+              p:after="r[@uid='{D8FEFF25-13B8-4249-BA38-AF0495E06839}']"
               s:ds="{36D4300D-D3E4-4195-A584-7AE6CFFA2137}"
               s:id="{6B5B0FE6-5C85-4487-BA7E-F8C2ECC186A8}"
               s:par=""
-              s:ph="content" />
+              s:ph="/content/inner" />
+            <r
+              uid="{EA8B00C7-7B6B-4E42-BD2F-9068FE3D33B5}"
+              p:after="r[@uid='{81615E60-91D1-4922-871B-31AF3BB7998D}']"
+              s:ds="{E43238A8-C3A0-4508-8DEF-FF9E1C6DB1F8}"
+              s:id="{D28AEEA6-B0F1-47E8-9E20-4748EA1B0D81}"
+              s:par=""
+              s:ph="/content/inner" />
           </d>
         </r>
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
