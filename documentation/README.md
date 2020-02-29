@@ -33,3 +33,21 @@ We hope the organizors of Sitecore hackathon love this submission as we know it 
   - hackathon.OrganizationName: Hackathon organization name.
 - Publish Site
 - Rebuild Indexs
+
+## Usage:
+
+The provided package will include demo items that we will explain how it works and how it can be used in other areas
+
+-  Open home page and navigate to /register page, and fill out the registration form.
+-  Navigate to login page /login and login with your email/pwd .
+-  To create your team, go to /teams/create and fill out the form, once you are done, your team will be created in github, you can go to the organization page in github and verify that both team and repo are created. Also in Sitecore content tree, a new item will be created in /sitecore/content/global/Teams/* . The item will have mapping details that represent the team in github
+-  You have the option to join other teams, by going to /teams/join page and fill out the form, make sure that you have the correct team name (in github it's called slug name) and a valid github username
+- Once joined, you will be added to github team repo, and in Sitecore content tree a new item will be created inside /sitecore/content/global/Members/*
+- After joining or creating a team you will be able to see your team members from within the website after you log in.
+
+## Video:
+
+https://www.youtube.com/watch?v=tGimhgij-00
+
+[![Watch our video on Youtube](https://img.youtube.com/vi/tGimhgij-00/0.jpg)](https://www.youtube.com/watch?v=tGimhgij-00)
+
