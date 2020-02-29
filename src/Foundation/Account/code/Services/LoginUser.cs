@@ -10,11 +10,11 @@ namespace Hackathon.Foundation.Account.Services
 {
     public class LoginUser
     {
-        public bool Register(string email, string password, string firstName, string lastName, string country, string twitterHandle, string githubUsername, string linkedInUsername)
+        public bool Register(string email, string password, string firstName, string lastName, string twitterHandle, string githubUsername, string linkedInUsername)
         {
             //var isRegistered = false;
 
-            if (AddUser(email, password, firstName, lastName, country, twitterHandle, githubUsername, linkedInUsername))
+            if (AddUser(email, password, firstName, lastName, twitterHandle, githubUsername, linkedInUsername))
             {
                 //isRegistered = true;
                 return Login(email, password);
@@ -36,32 +36,36 @@ namespace Hackathon.Foundation.Account.Services
             return false;
         }
 
-        private bool AddUser(string email, string password, string firstName, string lastName, string twitterHandle, string githubUsername, string linkedInUsername, string country)
+        private bool AddUser(string email, string password, string firstName, string lastName, string twitterHandle, string githubUsername, string linkedInUsername)
         {
             string userName = email;
-            var loggedIn = false;
+            var success = false;
             //userName = string.Format(@"{0}\{1}", domain, userName);
             //string newPassword = Membership.GeneratePassword(10, 3);
             try
             {
                 if (!User.Exists(userName))
                 {
-                    Membership.CreateUser(userName, password, email);
+                    var domain = Sitecore.Context.Domain;
+                    
+                   var accountName = domain.GetFullName(userName);
+                   Membership.CreateUser(accountName, password, email);
 
                     // Edit the profile information
-                    User user = User.FromName(userName, true);
+                    User user = User.FromName(accountName, true);
                     Sitecore.Security.UserProfile userProfile = user.Profile;
                     userProfile.FullName = string.Format("{0} {1}", firstName, lastName);
                     //userProfile.Comment = comment;
 
                     // Assigning the user profile template
                     userProfile.SetPropertyValue("ProfileItemId", "{BBCCF1F4-A638-4FE3-9B2E-8E5D7D73AE9E}");
-
-                    userProfile.SetCustomProperty("Country", country);
-                    userProfile.SetCustomProperty("Twitter Handle", twitterHandle);
+                    
+                    userProfile.SetCustomProperty("Twitter Handle", twitterHandle != null ? twitterHandle : string.Empty);
                     userProfile.SetCustomProperty("Github Username", githubUsername);
-                    userProfile.SetCustomProperty("LinkedIn Username", linkedInUsername);
+                    userProfile.SetCustomProperty("LinkedIn Username", linkedInUsername != null ? linkedInUsername : string.Empty);
                     userProfile.Save();
+
+                    success = true;
                 }
             }
             catch (Exception ex)
@@ -69,7 +73,7 @@ namespace Hackathon.Foundation.Account.Services
                 Sitecore.Diagnostics.Log.Error(string.Format("Error in Client.Project.Security.UserMaintenance (AddUser): Message: {0}; Source:{1}", ex.Message, ex.Source), this);
             }
 
-            return loggedIn;
+            return success;
         }
 
         public string GetCurrentUserGithub()

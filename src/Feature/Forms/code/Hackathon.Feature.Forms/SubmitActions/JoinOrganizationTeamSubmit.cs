@@ -49,9 +49,7 @@ namespace Hackathon.Feature.Forms.SubmitActions
             var loginUser = new LoginUser();
             var loggedInProfile = loginUser.GetCurrentUserProfile();
             var githubUsername = loginUser.GetCurrentUserGithub();
-            var country = loginUser.GetCurrentUserCountry();
-
-            if (!string.IsNullOrEmpty(teamJoinCode) && !string.IsNullOrEmpty(githubUsername) && !string.IsNullOrEmpty(country))
+            if (!string.IsNullOrEmpty(teamJoinCode) && !string.IsNullOrEmpty(githubUsername))
             {
                 var teamsRepo = new TeamsRepository();
 

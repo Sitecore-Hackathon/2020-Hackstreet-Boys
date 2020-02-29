@@ -7,6 +7,7 @@ using static Hackathon.Feature.Forms.Helper.SubmitActionHelper;
 using Hackathon.Foundation.Teams.Repositories;
 using System.Collections.Generic;
 using Hackathon.Foundation.Account.Services;
+using System;
 
 namespace Hackathon.Feature.Forms.SubmitActions
 {
@@ -30,56 +31,59 @@ namespace Hackathon.Feature.Forms.SubmitActions
             return true;
         }
 
+
+        public override void ExecuteAction(FormSubmitContext formSubmitContext, string parameters)
+        {
+            string tParametersDatum;
+            Assert.ArgumentNotNull(formSubmitContext, "formSubmitContext");
+            if (this.TryParse(parameters, out tParametersDatum))
+            {
+                try
+                {
+                    if (this.Execute(tParametersDatum, formSubmitContext))
+                    {
+                        return;
+                    }
+                }
+                catch (ArgumentNullException argumentNullException)
+                {
+                }
+            }
+            formSubmitContext.Errors.Add(new FormActionError()
+            {
+                ErrorMessage = this.SubmitActionData.ErrorMessage
+            });
+        }
+
         protected override bool Execute(string data, FormSubmitContext formSubmitContext)
         {
             Assert.ArgumentNotNull(formSubmitContext, nameof(formSubmitContext));
 
             // create a new team using the data?
 
-            return Execute(formSubmitContext.Fields); 
+            return ExecuteMigrate(formSubmitContext.Fields); 
         }
 
-        public bool Execute(IList<IViewModel> fields)
+        public bool ExecuteMigrate(IList<IViewModel> fields)
         {
             var firstName = fields.GetFieldValue("FirstName");
             var lastName = fields.GetFieldValue("LastName");
             var email = fields.GetFieldValue("Email");
             var password = fields.GetFieldValue("Password");
-            var country = fields.GetFieldValue("Country");
+            //var country = fields.GetFieldValue("Country");
             var githubUser = fields.GetFieldValue("GithubUser");
             var twitterUser = fields.GetFieldValue("TwitterUser");
             var linkedInUser = fields.GetFieldValue("LinkedInUser");
 
             if (!string.IsNullOrEmpty(firstName) && !string.IsNullOrEmpty(lastName) && !string.IsNullOrEmpty(email)
-                && !string.IsNullOrEmpty(password) && !string.IsNullOrEmpty(country) && !string.IsNullOrEmpty(githubUser))
+                && !string.IsNullOrEmpty(password) && !string.IsNullOrEmpty(githubUser))
             {
                 var loginUser = new LoginUser();
-                var registerResponse = loginUser.Register(email, password, firstName, lastName, country, twitterUser, githubUser, linkedInUser);
+                var registerResponse = loginUser.Register(email, password, firstName, lastName, twitterUser, githubUser, linkedInUser);
                 // make the sitecore user
 
-                // make the connected team member item
-                var teamsRepo = new TeamsRepository(); 
-                var newTeamMemberItem = teamsRepo.CreateHackathonTeamMember(firstName, lastName, email, githubUser);
-
-                if (newTeamMemberItem != null) { 
-                    return true;
-                }
-            }
-            /*
-            var username = _user.CurrentProfile?.ProfileUser?.LocalName;
-            if (string.IsNullOrWhiteSpace(username))
-                throw new System.UnauthorizedAccessException("Please log-in to change your password");
-
-            var newPassword = fields.GetFieldValue("New Password");
-            Assert.ArgumentNotNull(newPassword, "You should fill in the 'New Password' field.");
-
-            var oldPassword = fields.GetFieldValue("Old Password");
-            Assert.ArgumentNotNull(oldPassword, "You should fill in the 'Old Password' field.");
-
-            var response = _data.ChangePassword(username, newPassword, oldPassword);
-            if (response.ResponseCode != WebServices.SDK.Abstractions.Models.Api.ResponseCode.Success)
-                throw new Exception(response.Message);
-                */
+                return registerResponse;
+            } 
 
             return false; 
         }

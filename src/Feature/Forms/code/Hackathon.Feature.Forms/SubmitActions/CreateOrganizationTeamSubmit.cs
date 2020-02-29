@@ -48,7 +48,7 @@ namespace Hackathon.Feature.Forms.SubmitActions
             {
                 var teamsRepo = new TeamsRepository();
                 
-                var newTeamItem = teamsRepo.CreateHackathonTeam(teamName, githubUsername, teamDescription);
+                var newTeamItem = teamsRepo.CreateHackathonTeam(teamName, teamDescription, githubUsername);
 
                 if (newTeamItem != null)
                 {

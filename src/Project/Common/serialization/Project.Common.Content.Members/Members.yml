@@ -4,6 +4,15 @@ Parent: "9f04ab8e-3667-4645-819b-d22cada930c8"
 Template: "a5362412-2f45-41d7-b12a-cec798bf1b0d"
 Path: /sitecore/content/Global/Members
 DB: master
+SharedFields:
+- ID: "a0cb3965-8884-4c7a-8815-b6b2e5ced162"
+  Hint: __Editors
+  Type: TreelistEx
+  Value: "{59F53BBB-D1F5-4E38-8EBA-0D73109BB59B}"
+- ID: "d312103c-b36c-4ca5-864a-c85f9abda503"
+  Hint: __Is Bucket
+  Type: Checkbox
+  Value: 1
 Languages:
 - Language: en
   Versions:
