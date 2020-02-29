@@ -32,4 +32,4 @@ We hope the organizors of Sitecore hackathon love this submission as we know it 
   - hackathon.GitHubAppName: Github app name created for thee website
   - hackathon.OrganizationName: Hackathon organization name.
 - Publish Site
-- Rebuild Index (need master and core indexed for module to fully work)
+- Rebuild Indexs
