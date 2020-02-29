@@ -96,7 +96,7 @@
     <Content Include="Views\PageContent\Menu.cshtml" />
     <Content Include="Views\PageContent\StatCounter.cshtml" />
     <None Include="Views\PageContent\TwoChoice.cshtml" />
-    <None Include="Views\PageContent\RichTextContent.cshtml" />
+    <Content Include="Views\PageContent\RichTextContent.cshtml" />
     <Content Include="Views\PageContent\_Choice.cshtml" />
     <Content Include="Views\PageContent\TeamDetails.cshtml" />
   </ItemGroup>
