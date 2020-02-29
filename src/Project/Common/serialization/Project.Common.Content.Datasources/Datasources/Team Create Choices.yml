@@ -1,0 +1,27 @@
+﻿---
+ID: "afb7d2d0-5a55-4c60-9ede-5a43e76e0d55"
+Parent: "7aad3ed3-c0af-4a35-be17-14384482672b"
+Template: "ea160845-cd31-4de2-a05a-1e0d8119f64c"
+Path: /sitecore/content/Global/Datasources/Team Create Choices
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200229T083730Z
+    - ID: "43b5e614-bf6e-42ed-8152-ed9933df7df8"
+      Hint: Title
+      Value: Create a team or join an existing team
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "9762e626-bb4f-44d2-8728-a265f085d575"
+      Hint: Choice 2 Title
+      Value: Join A Team
+    - ID: "9c3f750c-7937-4fe4-94a9-aebe99009907"
+      Hint: Choice 1 Title
+      Value: Create A Team

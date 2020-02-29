@@ -16,7 +16,7 @@ namespace Hackathon.Foundation.Teams
     {
         public static bool IsMyTeam(this Item teamItem, Item memberItem)
         {
-            Sitecore.Data.Fields.MultilistField members = (Sitecore.Data.Fields.MultilistField)teamItem.Fields[Constants.Templates.TeamGithubData.Members];
+            Sitecore.Data.Fields.MultilistField members = (Sitecore.Data.Fields.MultilistField)teamItem.Fields[Constants.Templates.Team.Members];
             if (members != null && members.TargetIDs.Contains(memberItem.ID))
             {
                 return true;

@@ -35,11 +35,10 @@ namespace Hackathon.Feature.Forms.SubmitActions
 
             // create a new team using the data?
 
-            Execute(formSubmitContext.Fields);
-            return true;
+            return Execute(formSubmitContext.Fields); 
         }
 
-        public void Execute(IList<IViewModel> fields)
+        public bool Execute(IList<IViewModel> fields)
         {
             var firstName = fields.GetFieldValue("FirstName");
             var lastName = fields.GetFieldValue("LastName");
@@ -54,7 +53,11 @@ namespace Hackathon.Feature.Forms.SubmitActions
             {
                 var teamsRepo = new TeamsRepository();
 
-                var newTeamMemberItem = teamsRepo.CreateHackathonTeamMember(firstName, lastName, email, githubUser); 
+                var newTeamMemberItem = teamsRepo.CreateHackathonTeamMember(firstName, lastName, email, githubUser);
+
+                if (newTeamMemberItem != null) { 
+                    return true;
+                }
             }
             /*
             var username = _user.CurrentProfile?.ProfileUser?.LocalName;
@@ -71,6 +74,8 @@ namespace Hackathon.Feature.Forms.SubmitActions
             if (response.ResponseCode != WebServices.SDK.Abstractions.Models.Api.ResponseCode.Success)
                 throw new Exception(response.Message);
                 */
+
+            return false; 
         }
     }
 }

@@ -1,0 +1,21 @@
+﻿---
+ID: "f3eaeeeb-5c35-467c-bbe3-78613fb19290"
+Parent: "9f04ab8e-3667-4645-819b-d22cada930c8"
+Template: "4e1e7491-3140-4cd0-aaa4-f0e2e4cb2ce8"
+Path: /sitecore/content/Global/Teams
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200229T033635Z
+    - ID: "33678750-3623-4912-bab9-90428da550a5"
+      Hint: Title
+      Value: Participating Teams
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin

@@ -33,11 +33,11 @@ namespace Hackathon.Feature.Forms.SubmitActions
         {
             Assert.ArgumentNotNull(formSubmitContext, nameof(formSubmitContext));
 
-            Execute(formSubmitContext.Fields);
-            return true;
+            
+            return Execute(formSubmitContext.Fields);
         }
 
-        public void Execute(IList<IViewModel> fields)
+        public bool Execute(IList<IViewModel> fields)
         {
             var teamName = fields.GetFieldValue("TeamName");
             var teamDescription = fields.GetFieldValue("TeamDescription");
@@ -48,6 +48,8 @@ namespace Hackathon.Feature.Forms.SubmitActions
                 var githubUsername = "kvn-prhn";
 
                 var newTeamItem = teamsRepo.CreateHackathonTeam(teamName, githubUsername, teamDescription);
+
+                return true;
             }
             /*
             var username = _user.CurrentProfile?.ProfileUser?.LocalName;
@@ -64,6 +66,8 @@ namespace Hackathon.Feature.Forms.SubmitActions
             if (response.ResponseCode != WebServices.SDK.Abstractions.Models.Api.ResponseCode.Success)
                 throw new Exception(response.Message);
                 */
+
+            return false;
         }
     }
 }

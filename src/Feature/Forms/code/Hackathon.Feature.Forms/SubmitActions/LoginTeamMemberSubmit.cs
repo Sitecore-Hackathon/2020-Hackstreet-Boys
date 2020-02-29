@@ -34,13 +34,12 @@ namespace Hackathon.Feature.Forms.SubmitActions
             Assert.ArgumentNotNull(formSubmitContext, nameof(formSubmitContext));
 
             // create a new team using the data?
-
-            Execute(formSubmitContext.Fields);
-            return true;
+            
+            return Execute(formSubmitContext.Fields); 
         }
 
 
-        public void Execute(IList<IViewModel> fields)
+        public bool Execute(IList<IViewModel> fields)
         {
             var email = fields.GetFieldValue("Email");
             var password = fields.GetFieldValue("Password");
@@ -48,6 +47,8 @@ namespace Hackathon.Feature.Forms.SubmitActions
             if (!string.IsNullOrEmpty(email) && !string.IsNullOrEmpty(password))
             {
                 // login the sitecore user.
+
+                return true;
             }
             /*
             var username = _user.CurrentProfile?.ProfileUser?.LocalName;
@@ -64,6 +65,8 @@ namespace Hackathon.Feature.Forms.SubmitActions
             if (response.ResponseCode != WebServices.SDK.Abstractions.Models.Api.ResponseCode.Success)
                 throw new Exception(response.Message);
                 */
+
+            return false;
         }
     }
 }

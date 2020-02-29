@@ -179,6 +179,8 @@ namespace Hackathon.Feature.PageContent.Controllers
             if (ds == null)
                 return View();
 
+            string loggedInUser = "sdafsd"; 
+
             var viewModel = new MenuViewModel()
             {
                 MenuLinks = ds.Children
@@ -193,10 +195,13 @@ namespace Hackathon.Feature.PageContent.Controllers
                         return new MenuLink()
                         {
                             Label = c[Constants.Templates.MenuLink.Label],
-                            LinkUrl = linkUrl + (!string.IsNullOrEmpty(linkField.Anchor) ? "#" + linkField.Anchor : string.Empty)
+                            LinkUrl = linkUrl + (!string.IsNullOrEmpty(linkField.Anchor) ? "#" + linkField.Anchor : string.Empty),
+                            ShowOnlyOnLogin = !string.IsNullOrEmpty(c[Constants.Templates.MenuLink.ShowOnlyWithLoggedInUser]) && c[Constants.Templates.MenuLink.ShowOnlyWithLoggedInUser].Equals("1"),
+                            HideWithLoggedInUser = !string.IsNullOrEmpty(c[Constants.Templates.MenuLink.HideWithLoggedInUser]) && c[Constants.Templates.MenuLink.HideWithLoggedInUser].Equals("1")
                         };
                     })
-                    .ToList()
+                    .ToList(),
+                UserLoggedIn = loggedInUser != null
             };
             return View(viewModel); 
         }

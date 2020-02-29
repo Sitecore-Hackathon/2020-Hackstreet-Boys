@@ -33,24 +33,24 @@ namespace Hackathon.Foundation.Teams.Repositories
                 var teamResponse = _service.CreateOrganizationTeam(friendlyTeamName, teamDescription);
                 var repoResponse = _service.CreateOrganizationTeamRepo(teamResponse.id.ToString(), DateTime.Now.Year + "-" + friendlyTeamName);
 
-                var teamItem = teamsfolder.Add(friendlyTeamName, new TemplateID(new ID(Constants.Templates.TeamsTemplate)));
+                var teamItem = teamsfolder.Add(friendlyTeamName, new TemplateID(new ID(Constants.Templates.Team.TemplateId)));
                 
                 teamItem.Editing.BeginEdit();
-                teamItem.Fields[Constants.Templates.TeamGithubData.Name].Value = teamResponse.name;
-                teamItem.Fields[Constants.Templates.TeamGithubData.Id].Value = teamResponse.id.ToString();
-                teamItem.Fields[Constants.Templates.TeamGithubData.Slug].Value = teamResponse.slug;
-                teamItem.Fields[Constants.Templates.TeamGithubData.Description].Value = teamResponse.description;
-                teamItem.Fields[Constants.Templates.TeamGithubData.Url].Value = teamResponse.html_url;
-                teamItem.Fields[Constants.Templates.TeamGithubData.RepoName].Value = repoResponse.name;
-                teamItem.Fields[Constants.Templates.TeamGithubData.RepoFullName].Value = repoResponse.full_name;
-                teamItem.Fields[Constants.Templates.TeamGithubData.RepoUrl].Value = repoResponse.html_url;
+                teamItem.Fields[Constants.Templates.Team.Name].Value = teamResponse.name;
+                teamItem.Fields[Constants.Templates.Team.Id].Value = teamResponse.id.ToString();
+                teamItem.Fields[Constants.Templates.Team.Slug].Value = teamResponse.slug;
+                teamItem.Fields[Constants.Templates.Team.Description].Value = teamResponse.description;
+                teamItem.Fields[Constants.Templates.Team.Url].Value = teamResponse.html_url;
+                teamItem.Fields[Constants.Templates.Team.RepoName].Value = repoResponse.name;
+                teamItem.Fields[Constants.Templates.Team.RepoFullName].Value = repoResponse.full_name;
+                teamItem.Fields[Constants.Templates.Team.RepoUrl].Value = repoResponse.html_url;
                 teamItem.Editing.EndEdit();
 
                 if (Sitecore.Context.User.IsAuthenticated)
                 {
                     var teamMember = CreateHackathonTeamMember(Sitecore.Context.User.Profile.FullName, "", Sitecore.Context.User.Profile.Email, githubUsername);
                     teamItem.Editing.BeginEdit();
-                    Sitecore.Data.Fields.MultilistField members = (Sitecore.Data.Fields.MultilistField)teamItem.Fields[Constants.Templates.TeamGithubData.Members];
+                    Sitecore.Data.Fields.MultilistField members = (Sitecore.Data.Fields.MultilistField)teamItem.Fields[Constants.Templates.Team.Members];
                     members.Add(teamMember.ID.ToString());
                     teamItem.Editing.EndEdit();
                 }
@@ -85,7 +85,7 @@ namespace Hackathon.Foundation.Teams.Repositories
                 var teamMembersfolder = masterDb.GetItem(Settings.GetSetting(Constants.Settings.TeamMembersFolder));
                 var friendlyTeamName = Sitecore.Data.Items.ItemUtil.ProposeValidItemName(firstName + " " + lastName);
 
-                var teamMemberItem = teamMembersfolder.Add(friendlyTeamName, new TemplateID(new ID(Constants.Templates.TeamsMemberTemplate)));
+                var teamMemberItem = teamMembersfolder.Add(friendlyTeamName, new TemplateID(new ID(Constants.Templates.TeamMember.TemplateId)));
                 teamMemberItem.Editing.BeginEdit();
                 teamMemberItem.Fields[Constants.Templates.TeamMember.FirstName].Value = firstName;
                 teamMemberItem.Fields[Constants.Templates.TeamMember.LastName].Value = lastName;
@@ -123,9 +123,9 @@ namespace Hackathon.Foundation.Teams.Repositories
 
                 if (teamMember != null)
                 {
-                    _service.AddMemberToRepoRepo(teamItem[Hackathon.Foundation.Teams.Constants.Templates.TeamGithubData.RepoName], githubUsername);
+                    _service.AddMemberToRepoRepo(teamItem[Hackathon.Foundation.Teams.Constants.Templates.Team.RepoName], githubUsername);
                     teamItem.Editing.BeginEdit();
-                    Sitecore.Data.Fields.MultilistField members = (Sitecore.Data.Fields.MultilistField)teamItem.Fields[Constants.Templates.TeamGithubData.Members];
+                    Sitecore.Data.Fields.MultilistField members = (Sitecore.Data.Fields.MultilistField)teamItem.Fields[Constants.Templates.Team.Members];
                     members.Add(teamMember.ID.ToString());
                     teamItem.Editing.EndEdit();
                 }
@@ -162,8 +162,8 @@ namespace Hackathon.Foundation.Teams.Repositories
             var teamsfolder = masterDb.GetItem(teamFolderPath);
             if (teamsfolder != null)
             {
-                var matchingTeam = teamsfolder.Children.FirstOrDefault(i => !string.IsNullOrEmpty(i[Hackathon.Foundation.Teams.Constants.Templates.TeamGithubData.Slug]) &&
-                    i[Hackathon.Foundation.Teams.Constants.Templates.TeamGithubData.Slug].ToLower() == teamSlug.ToLower());
+                var matchingTeam = teamsfolder.Children.FirstOrDefault(i => !string.IsNullOrEmpty(i[Hackathon.Foundation.Teams.Constants.Templates.Team.Slug]) &&
+                    i[Hackathon.Foundation.Teams.Constants.Templates.Team.Slug].ToLower() == teamSlug.ToLower());
 
                 return matchingTeam;
             }
@@ -208,11 +208,11 @@ namespace Hackathon.Foundation.Teams.Repositories
         {
             return new Team()
             {
-                Name = item[Hackathon.Foundation.Teams.Constants.Templates.TeamGithubData.Name],
-                Id = item[Hackathon.Foundation.Teams.Constants.Templates.TeamGithubData.Id],
-                Slug = item[Hackathon.Foundation.Teams.Constants.Templates.TeamGithubData.Slug],
-                Description = item[Hackathon.Foundation.Teams.Constants.Templates.TeamGithubData.Description],
-                Url = item[Hackathon.Foundation.Teams.Constants.Templates.TeamGithubData.Url],
+                Name = item[Hackathon.Foundation.Teams.Constants.Templates.Team.Name],
+                Id = item[Hackathon.Foundation.Teams.Constants.Templates.Team.Id],
+                Slug = item[Hackathon.Foundation.Teams.Constants.Templates.Team.Slug],
+                Description = item[Hackathon.Foundation.Teams.Constants.Templates.Team.Description],
+                Url = item[Hackathon.Foundation.Teams.Constants.Templates.Team.Url],
             };
         }
     }
