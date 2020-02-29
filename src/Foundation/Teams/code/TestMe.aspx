@@ -15,6 +15,10 @@
 			<asp:Button ID="CreateTeamButton" runat="server" OnClick="CreateTeamButton_Click" Text="Do Magic" />
 			<br />
 			<br />
+			Join a team:<asp:TextBox ID="txtTeamName" runat="server"></asp:TextBox>
+			<asp:TextBox ID="txtGituser" runat="server"></asp:TextBox>
+			<asp:Button ID="btnJoin" runat="server" OnClick="btnJoin_Click" Text="Do Magic" />
+			<br />
         </div>
     </form>
 </body>

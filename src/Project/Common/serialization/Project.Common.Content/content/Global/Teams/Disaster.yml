@@ -1,0 +1,48 @@
+﻿---
+ID: "b788cfe5-a9a1-4e71-ae54-378c8abe4179"
+Parent: "f3eaeeeb-5c35-467c-bbe3-78613fb19290"
+Template: "cd253ae6-d649-4ae8-a875-af4addd42f6c"
+Path: /sitecore/content/Global/Teams/Disaster
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "02c052b6-70f1-4e2d-a1e8-27f4ee104842"
+      Hint: description
+      Value: "Awesome Team!"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200229T163908Z
+    - ID: "3a05b2eb-c0a9-4654-93cf-94bfa673c5f1"
+      Hint: Members
+      Type: Multilist with Search
+      Value: |
+        {FFD74308-1E5C-41BD-AF60-95C3744870BD}
+        {E0A7FEC1-5A33-4590-81D3-7776432CA66D}
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        extranet\Anonymous
+    - ID: "647180e0-afad-4845-8b29-3a0b22010991"
+      Hint: url
+      Value: "https://github.com/orgs/2020-hackstreet-boys/teams/disaster"
+    - ID: "7171bfd2-08c0-414e-bed1-797d98ed9553"
+      Hint: "repo-name"
+      Value: "2020-Disaster"
+    - ID: "87ff54e7-3c33-49b4-9ad5-a4ffa3785559"
+      Hint: "repo-url"
+      Value: "https://github.com/2020-hackstreet-boys/2020-Disaster"
+    - ID: "abd4bba0-8dcd-412f-b15a-61a7d6d2c04b"
+      Hint: id
+      Value: 3683001
+    - ID: "c44be667-5e05-4c81-91dc-ce0982a65108"
+      Hint: Repo Full Name
+      Value: "2020-hackstreet-boys/2020-Disaster"
+    - ID: "d96fe5cd-dfe1-4609-a858-3ea21bc9b234"
+      Hint: name
+      Value: Disaster
+    - ID: "f4ae97c7-cdd1-413b-8f0f-6bfdbcbbe038"
+      Hint: slug
+      Value: disaster

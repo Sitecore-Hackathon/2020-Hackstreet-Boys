@@ -19,7 +19,13 @@ namespace Hackathon.Foundation.Teams
         protected void CreateTeamButton_Click(object sender, EventArgs e)
         {
             TeamsRepository repo = new TeamsRepository();
-            repo.CreateHackathonTeam(teamName.Text, "SzymonAE", "Awesome Team!");
+            repo.CreateHackathonTeam(teamName.Text, "Awesome Team!", "SzymonAE");
+        }
+
+        protected void btnJoin_Click(object sender, EventArgs e)
+        {
+            TeamsRepository repo = new TeamsRepository();
+            repo.JoinHackathonTeam("Test", "test", "aa@aa.com", txtGituser.Text, txtTeamName.Text);
         }
     }
 }

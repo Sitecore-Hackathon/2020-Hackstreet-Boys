@@ -16,7 +16,9 @@ namespace Hackathon.Foundation.Teams
                 public static string Description = "description";
                 public static string Url = "url";
                 public static string RepoName = "repo-name";
+                public static string RepoFullName = "Repo Full Name";
                 public static string RepoUrl = "repo-url";
+                public static string Members = "Members";
             }
             public static class TeamMember
             {
