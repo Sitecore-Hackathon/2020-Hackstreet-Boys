@@ -52,7 +52,7 @@ namespace Hackathon.Feature.PageContent.Controllers
 
             foreach (Item child in ds.Children)
             {
-                if (child.TemplateID.ToString() == Constants.Templates.Team.TemplateId)
+                if (child.TemplateID.ToString() == Hackathon.Foundation.Teams.Constants.Templates.Team.TemplateId)
                 {
                     viewModel.Teams.Add(_teamsRepository.GetTeamFromItem(child));
                 }
@@ -204,8 +204,31 @@ namespace Hackathon.Feature.PageContent.Controllers
                 UserLoggedIn = loggedInUser != null
             };
             return View(viewModel); 
-        }
+        } 
 
+        public ActionResult StatCounter()
+        {
+            var viewModel = new StatCounterViewModel()
+            {
+                StatBlocks = new List<StatBlock>()
+            };
+            viewModel.StatBlocks.Add(new StatBlock()
+            {
+                Label = "Users",
+                Value = _teamsRepository.GetTeamMemberCount()
+            });
+            viewModel.StatBlocks.Add(new StatBlock()
+            {
+                Label = "Countries",
+                Value = 39
+            });
+            viewModel.StatBlocks.Add(new StatBlock()
+            {
+                Label = "Teams",
+                Value = _teamsRepository.GetTeamsCount()
+            });
+            return View(viewModel); 
+        }
 
         private string GetMediaUrlFromId(ImageField imgField)
         {

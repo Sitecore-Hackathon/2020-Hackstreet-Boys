@@ -42,7 +42,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-   <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="2.1.1" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="2.1.1" />
     <PackageReference Include="Microsoft.Web.Infrastructure" Version="1.0.0.0" />
     <PackageReference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform" Version="2.0.1" />
     <PackageReference Include="Microsoft.Net.Compilers" Version="2.10.0">
@@ -56,7 +56,6 @@
     <PackageReference Include="Sitecore.Kernel" Version="9.3.0" />
     <PackageReference Include="Sitecore.Logging" Version="9.3.0" />
     <PackageReference Include="Sitecore.Mvc" Version="9.3.0" />
-    
   </ItemGroup>
   <ItemGroup>
     <Reference Include="sysglobl" />
@@ -81,19 +80,21 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-  </ItemGroup>  
+  </ItemGroup>
   <ItemGroup>
     <Compile Include="Constants.cs" />
     <Compile Include="Controllers\PageContentController.cs" />
     <Compile Include="Models\ViewModels\FullHeroViewModel.cs" />
     <Compile Include="Models\ViewModels\MenuViewModel.cs" />
     <Compile Include="Models\ViewModels\RichTextContentViewModel.cs" />
+    <Compile Include="Models\ViewModels\StatCounterViewModel.cs" />
     <Compile Include="Models\ViewModels\TeamAdminViewModel.cs" />
     <Compile Include="Models\ViewModels\TeamListViewModel.cs" />
     <Compile Include="Models\ViewModels\TwoChoiceViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Content Include="Views\PageContent\TeamAdmin.cshtml" />
     <Content Include="Views\PageContent\Menu.cshtml" />
+    <Content Include="Views\PageContent\StatCounter.cshtml" />
     <None Include="Views\PageContent\TwoChoice.cshtml" />
     <None Include="Views\PageContent\RichTextContent.cshtml" />
     <Content Include="Views\PageContent\_Choice.cshtml" />
@@ -109,9 +110,9 @@
     <Content Include="Views\PageContent\FullHero.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\Foundation\Teams\code\Hackathon.Foundation.Teams.csproj">
+    <ProjectReference Include="..\..\..\..\Foundation\Hackstreet\code\Hackathon.Foundation.Hackstreet.csproj">
       <Project>{2f3b82be-a3fb-4942-960b-5be646efb623}</Project>
-      <Name>Hackathon.Foundation.Teams</Name>
+      <Name>Hackathon.Foundation.Hackstreet</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
@@ -139,7 +140,7 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
-   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
   </Target>

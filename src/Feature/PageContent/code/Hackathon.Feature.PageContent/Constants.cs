@@ -26,14 +26,6 @@ namespace Hackathon.Feature.PageContent
                 public const string TextContent = "Text Content";
             }
 
-            public struct Team
-            {
-                public const string TemplateId = "{5E67BE75-BDC1-495E-8BAE-75DF48D3B3DB}";
-
-                public const string TeamName = "Team Name";
-                public const string Thumbnail = "Thumbnail";
-            }
-
             public struct TeamList
             {
                 public const string TemplateId = "{4E1E7491-3140-4CD0-AAA4-F0E2E4CB2CE8}";

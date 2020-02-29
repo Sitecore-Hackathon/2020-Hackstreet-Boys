@@ -97,8 +97,16 @@
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\Foundation\Teams\code\Hackathon.Foundation.Teams.csproj">
+    <ProjectReference Include="..\..\..\..\Foundation\Account\code\Hackathon.Foundation.Account.csproj">
+      <Project>{bd4c33c3-ba06-4ebd-b602-a672dbf016b7}</Project>
+      <Name>Hackathon.Foundation.Account</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Foundation\Hackstreet\code\Hackathon.Foundation.Hackstreet.csproj">
       <Project>{2f3b82be-a3fb-4942-960b-5be646efb623}</Project>
+      <Name>Hackathon.Foundation.Hackstreet</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Foundation\Teams\code\Hackathon.Foundation.Teams.csproj">
+      <Project>{40beea71-b393-4778-b3cb-2fc791b65ceb}</Project>
       <Name>Hackathon.Foundation.Teams</Name>
     </ProjectReference>
   </ItemGroup>

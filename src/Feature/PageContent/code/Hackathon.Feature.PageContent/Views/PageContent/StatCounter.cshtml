@@ -1,0 +1,18 @@
+﻿@model Hackathon.Feature.PageContent.Models.ViewModels.StatCounterViewModel
+
+@if (Model != null)
+{
+    <div class="stat-counter fh5co-counters" style="background-image: url(images/hero.jpg);" data-stellar-background-ratio="0.5" id="counter-animate">
+        <div class="fh5co-narrow-content animate-box fadeInUp animated">
+            <div class="row">
+                @foreach (var statBlock in Model.StatBlocks)
+                {
+                    <div class="col-md-4 text-center">
+                        <span class="fh5co-counter js-counter" data-from="0" data-to="@statBlock.Value" data-speed="5000" data-refresh-interval="50">@statBlock.Value</span>
+                        <span class="fh5co-counter-label">@statBlock.Label</span>
+                    </div>
+                } 
+            </div>
+        </div>
+    </div>
+}

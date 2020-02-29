@@ -139,9 +139,9 @@
       <Project>{8d9dd402-7aa4-4b39-9a9e-b096e31393cb}</Project>
       <Name>Hackathon.Feature.PageContent</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\Foundation\Teams\code\Hackathon.Foundation.Teams.csproj">
+    <ProjectReference Include="..\..\..\Foundation\Hackstreet\code\Hackathon.Foundation.Hackstreet.csproj">
       <Project>{2f3b82be-a3fb-4942-960b-5be646efb623}</Project>
-      <Name>Hackathon.Foundation.Teams</Name>
+      <Name>Hackathon.Foundation.Hackstreet</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

@@ -188,6 +188,30 @@ namespace Hackathon.Foundation.Teams.Repositories
             return null;
         }
 
+        public int GetTeamMemberCount()
+        {
+            var teamMembersFolderPath = Settings.GetSetting(Constants.Settings.TeamMembersFolder);
+            var masterDb = Sitecore.Configuration.Factory.GetDatabase("master");
+            var teamMembersfolder = masterDb.GetItem(teamMembersFolderPath);
+            if (teamMembersfolder != null)
+            {
+                return teamMembersfolder.Children.Count;
+            }
+            return 0;
+        }
+
+        public int GetTeamsCount()
+        {
+            var teamFolderPath = Settings.GetSetting(Constants.Settings.TeamsFolder);
+            var masterDb = Sitecore.Configuration.Factory.GetDatabase("master");
+            var teamsfolder = masterDb.GetItem(teamFolderPath);
+            if (teamsfolder != null)
+            {
+                return teamsfolder.Children.Count;
+            }
+            return 0; 
+        }
+
         public Item GetMyTeam(string githubUsername)
         {
             var myMemberItem = GetMatchingTeamMemberItemWithGithubUsername(githubUsername);

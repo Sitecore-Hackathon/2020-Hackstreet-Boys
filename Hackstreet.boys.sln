@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29613.14
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.705
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hackathon.Foundation.Hackstreet", "src\Foundation\Hackstreet\code\Hackathon.Foundation.Hackstreet.csproj", "{2F3B82BE-A3FB-4942-960B-5BE646EFB623}"
 EndProject
@@ -10,10 +10,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Hackstreet", "Hackstreet", "{175BAAB8-C68C-4B17-A6AE-5A94FA09BF2F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hackathon.Foundation.Teams", "src\Foundation\Teams\code\Hackathon.Foundation.Teams.csproj", "{40BEEA71-B393-4778-B3CB-2FC791B65CEB}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Foundation", "Foundation", "{E8E0D84F-4309-47E9-8588-07B488E026B2}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Teams", "Teams", "{85D02BC8-17F9-4B7E-A807-8246E84BEF61}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Serialization", "Serialization", "{60AEEC0C-5BDE-4CD5-8544-EC1B675ABF83}"
 EndProject
@@ -48,17 +44,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Account", "Account", "{83FA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hackathon.Foundation.Account", "src\Foundation\Account\code\Hackathon.Foundation.Account.csproj", "{BD4C33C3-BA06-4EBD-B602-A672DBF016B7}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Account", "Account", "{945DBAD7-21A2-4578-BCE8-08881C4AF4FC}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hackathon.Feature.Account", "src\Feature\Account\code\Hackathon.Feature.Account.csproj", "{8E09B241-D5A7-48F8-B364-D696921DCAFE}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PageContent", "PageContent", "{6C8CD556-CCE0-4063-8AC6-3F71FD7DBF9B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hackathon.Feature.PageContent", "src\Feature\PageContent\code\Hackathon.Feature.PageContent\Hackathon.Feature.PageContent.csproj", "{8D9DD402-7AA4-4B39-9A9E-B096E31393CB}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Forms", "Forms", "{52D45D21-AEC6-4061-B5D5-6FA7618514DC}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hackathon.Feature.Forms", "src\Feature\Forms\code\Hackathon.Feature.Forms\Hackathon.Feature.Forms.csproj", "{C50A604C-CCD4-4AF4-A1FC-3A183BB3BC8E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Forms", "Forms", "{92450AF2-C15A-4BE8-8B26-978E3C8565A5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Teams", "Teams", "{D9D4EBB3-EFDC-4B40-83FC-3B149605BB8C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -97,12 +91,6 @@ Global
 		{BD4C33C3-BA06-4EBD-B602-A672DBF016B7}.Release|Any CPU.Build.0 = Release|Any CPU
 		{BD4C33C3-BA06-4EBD-B602-A672DBF016B7}.SAM_Prod-CD2|Any CPU.ActiveCfg = SAM_Prod-CD2|Any CPU
 		{BD4C33C3-BA06-4EBD-B602-A672DBF016B7}.SAM_Prod-CD2|Any CPU.Build.0 = SAM_Prod-CD2|Any CPU
-		{8E09B241-D5A7-48F8-B364-D696921DCAFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8E09B241-D5A7-48F8-B364-D696921DCAFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8E09B241-D5A7-48F8-B364-D696921DCAFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8E09B241-D5A7-48F8-B364-D696921DCAFE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8E09B241-D5A7-48F8-B364-D696921DCAFE}.SAM_Prod-CD2|Any CPU.ActiveCfg = SAM_Prod-CD2|Any CPU
-		{8E09B241-D5A7-48F8-B364-D696921DCAFE}.SAM_Prod-CD2|Any CPU.Build.0 = SAM_Prod-CD2|Any CPU
 		{8D9DD402-7AA4-4B39-9A9E-B096E31393CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8D9DD402-7AA4-4B39-9A9E-B096E31393CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8D9DD402-7AA4-4B39-9A9E-B096E31393CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -122,6 +110,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{2F3B82BE-A3FB-4942-960B-5BE646EFB623} = {175BAAB8-C68C-4B17-A6AE-5A94FA09BF2F}
 		{175BAAB8-C68C-4B17-A6AE-5A94FA09BF2F} = {E546E29B-E35D-44FF-8F2A-6D6E25037AB0}
+		{40BEEA71-B393-4778-B3CB-2FC791B65CEB} = {D9D4EBB3-EFDC-4B40-83FC-3B149605BB8C}
 		{60AEEC0C-5BDE-4CD5-8544-EC1B675ABF83} = {E546E29B-E35D-44FF-8F2A-6D6E25037AB0}
 		{2CD7BDE0-6C2D-444E-9B9C-0C1A72C5AD97} = {506387F5-F058-4F71-B3F6-6063A768A659}
 		{5EC3A530-0B67-4BE8-9BED-7550B49062F9} = {506387F5-F058-4F71-B3F6-6063A768A659}
@@ -131,11 +120,14 @@ Global
 		{BDBFFA80-17FB-4878-AC23-782BCE576CB2} = {506387F5-F058-4F71-B3F6-6063A768A659}
 		{83FA4F52-BDF0-4DC6-815B-71198E524F63} = {E546E29B-E35D-44FF-8F2A-6D6E25037AB0}
 		{BD4C33C3-BA06-4EBD-B602-A672DBF016B7} = {83FA4F52-BDF0-4DC6-815B-71198E524F63}
-		{945DBAD7-21A2-4578-BCE8-08881C4AF4FC} = {4CE8CD2D-2C9A-4864-A140-49E825A74D50}
-		{8E09B241-D5A7-48F8-B364-D696921DCAFE} = {945DBAD7-21A2-4578-BCE8-08881C4AF4FC}
+		{6C8CD556-CCE0-4063-8AC6-3F71FD7DBF9B} = {4CE8CD2D-2C9A-4864-A140-49E825A74D50}
+		{8D9DD402-7AA4-4B39-9A9E-B096E31393CB} = {6C8CD556-CCE0-4063-8AC6-3F71FD7DBF9B}
+		{C50A604C-CCD4-4AF4-A1FC-3A183BB3BC8E} = {92450AF2-C15A-4BE8-8B26-978E3C8565A5}
+		{92450AF2-C15A-4BE8-8B26-978E3C8565A5} = {4CE8CD2D-2C9A-4864-A140-49E825A74D50}
+		{D9D4EBB3-EFDC-4B40-83FC-3B149605BB8C} = {E546E29B-E35D-44FF-8F2A-6D6E25037AB0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		EnterpriseLibraryConfigurationToolBinariesPathV6 = packages\EnterpriseLibrary.Common.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.6.0.1304.0\lib\portable-net45+win+wp8;packages\EnterpriseLibrary.TransientFaultHandling.Caching.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.Data.6.0.1304.1\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.ServiceBus.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.WindowsAzure.Storage.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.Configuration.6.0.1304.0\lib\NET45
 		SolutionGuid = {99147FCF-6DD1-49AD-A660-9B5EBF3FF542}
+		EnterpriseLibraryConfigurationToolBinariesPathV6 = packages\EnterpriseLibrary.Common.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.6.0.1304.0\lib\portable-net45+win+wp8;packages\EnterpriseLibrary.TransientFaultHandling.Caching.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.Data.6.0.1304.1\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.ServiceBus.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.WindowsAzure.Storage.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.Configuration.6.0.1304.0\lib\NET45
 	EndGlobalSection
 EndGlobal
