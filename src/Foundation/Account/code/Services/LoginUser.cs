@@ -84,6 +84,28 @@ namespace Hackathon.Foundation.Account.Services
             return githubUsername;
         }
 
+        public string GetCurrentUserCountry()
+        {
+            var country = string.Empty;
+
+            if (Sitecore.Context.User.IsAuthenticated)
+            {
+                country = Sitecore.Context.User.Profile.GetCustomProperty("Country");
+            }
+
+            return country; 
+        }
+
+        public Sitecore.Security.UserProfile GetCurrentUserProfile()
+        {
+            if (Sitecore.Context.User.IsAuthenticated)
+            {
+                return Sitecore.Context.User.Profile; 
+            }
+
+            return null;
+        }
+
 
         //private bool UsernameOrPasswordFieldIsNull(LoginUserFormFields field)
         //{

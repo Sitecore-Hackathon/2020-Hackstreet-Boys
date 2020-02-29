@@ -6,6 +6,7 @@ using Sitecore.ExperienceForms.Processing.Actions;
 using static Hackathon.Feature.Forms.Helper.SubmitActionHelper;
 using Hackathon.Foundation.Teams.Repositories;
 using System.Collections.Generic;
+using Hackathon.Foundation.Account.Services;
 
 namespace Hackathon.Feature.Forms.SubmitActions
 {
@@ -46,25 +47,9 @@ namespace Hackathon.Feature.Forms.SubmitActions
 
             if (!string.IsNullOrEmpty(email) && !string.IsNullOrEmpty(password))
             {
-                // login the sitecore user.
-
-                return true;
-            }
-            /*
-            var username = _user.CurrentProfile?.ProfileUser?.LocalName;
-            if (string.IsNullOrWhiteSpace(username))
-                throw new System.UnauthorizedAccessException("Please log-in to change your password");
-
-            var newPassword = fields.GetFieldValue("New Password");
-            Assert.ArgumentNotNull(newPassword, "You should fill in the 'New Password' field.");
-
-            var oldPassword = fields.GetFieldValue("Old Password");
-            Assert.ArgumentNotNull(oldPassword, "You should fill in the 'Old Password' field.");
-
-            var response = _data.ChangePassword(username, newPassword, oldPassword);
-            if (response.ResponseCode != WebServices.SDK.Abstractions.Models.Api.ResponseCode.Success)
-                throw new Exception(response.Message);
-                */
+                var loginUser = new LoginUser();
+                return loginUser.Login(email, password); 
+            } 
 
             return false;
         }

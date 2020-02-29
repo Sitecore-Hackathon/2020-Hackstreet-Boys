@@ -166,7 +166,12 @@ namespace Hackathon.Feature.PageContent.Controllers
 
             if (teamMatch != null)
             {
-                return View(teamMatch);
+                var viewModel = new TeamDetailsViewModel()
+                {
+                    Team = teamMatch,
+                    TeamMembers = new List<TeamMember>()  // TODO: get all members for this team
+                };
+                return View(viewModel);
             }
 
             // no matching team found :( 

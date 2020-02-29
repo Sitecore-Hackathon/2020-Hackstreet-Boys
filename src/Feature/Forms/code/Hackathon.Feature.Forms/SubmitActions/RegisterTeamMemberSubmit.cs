@@ -5,7 +5,8 @@ using Sitecore.ExperienceForms.Processing;
 using Sitecore.ExperienceForms.Processing.Actions;
 using static Hackathon.Feature.Forms.Helper.SubmitActionHelper;
 using Hackathon.Foundation.Teams.Repositories;
-using System.Collections.Generic; 
+using System.Collections.Generic;
+using Hackathon.Foundation.Account.Services;
 
 namespace Hackathon.Feature.Forms.SubmitActions
 {
@@ -47,12 +48,17 @@ namespace Hackathon.Feature.Forms.SubmitActions
             var country = fields.GetFieldValue("Country");
             var githubUser = fields.GetFieldValue("GithubUser");
             var twitterUser = fields.GetFieldValue("TwitterUser");
+            var linkedInUser = fields.GetFieldValue("LinkedInUser");
 
             if (!string.IsNullOrEmpty(firstName) && !string.IsNullOrEmpty(lastName) && !string.IsNullOrEmpty(email)
                 && !string.IsNullOrEmpty(password) && !string.IsNullOrEmpty(country) && !string.IsNullOrEmpty(githubUser))
             {
-                var teamsRepo = new TeamsRepository();
+                var loginUser = new LoginUser();
+                var registerResponse = loginUser.Register(email, password, firstName, lastName, country, twitterUser, githubUser, linkedInUser);
+                // make the sitecore user
 
+                // make the connected team member item
+                var teamsRepo = new TeamsRepository(); 
                 var newTeamMemberItem = teamsRepo.CreateHackathonTeamMember(firstName, lastName, email, githubUser);
 
                 if (newTeamMemberItem != null) { 

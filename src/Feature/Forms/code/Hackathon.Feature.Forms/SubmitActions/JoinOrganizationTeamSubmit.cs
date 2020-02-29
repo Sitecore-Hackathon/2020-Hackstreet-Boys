@@ -12,6 +12,7 @@ using System.Collections.Generic;
 using System.Linq; 
 using static Hackathon.Feature.Forms.Helper.SubmitActionHelper;
 using Hackathon.Foundation.Teams.Repositories;
+using Hackathon.Foundation.Account.Services;
 
 namespace Hackathon.Feature.Forms.SubmitActions
 {
@@ -44,34 +45,23 @@ namespace Hackathon.Feature.Forms.SubmitActions
 
         public bool Execute(IList<IViewModel> fields)
         {
-            var teamJoinCode = fields.GetFieldValue("TeamJoinCode"); 
+            var teamJoinCode = fields.GetFieldValue("TeamJoinCode");
+            var loginUser = new LoginUser();
+            var loggedInProfile = loginUser.GetCurrentUserProfile();
+            var githubUsername = loginUser.GetCurrentUserGithub();
+            var country = loginUser.GetCurrentUserCountry();
 
-            if (!string.IsNullOrEmpty(teamJoinCode))
+            if (!string.IsNullOrEmpty(teamJoinCode) && !string.IsNullOrEmpty(githubUsername) && !string.IsNullOrEmpty(country))
             {
                 var teamsRepo = new TeamsRepository();
-                var githubUsername = "kvn-prhn";
 
+                var teamMember = teamsRepo.JoinHackathonTeam(loggedInProfile.FullName, "", loggedInProfile.Email, githubUsername, teamJoinCode); 
 
-                //teamsRepo.JoinHackathonTeam()
-                //var newTeamItem = teamsRepo.Joi // TODO: join team
-
-                return true; 
+                if (teamMember != null) { 
+                    return true;
+                }
             }
-            /*
-            var username = _user.CurrentProfile?.ProfileUser?.LocalName;
-            if (string.IsNullOrWhiteSpace(username))
-                throw new System.UnauthorizedAccessException("Please log-in to change your password");
 
-            var newPassword = fields.GetFieldValue("New Password");
-            Assert.ArgumentNotNull(newPassword, "You should fill in the 'New Password' field.");
-
-            var oldPassword = fields.GetFieldValue("Old Password");
-            Assert.ArgumentNotNull(oldPassword, "You should fill in the 'Old Password' field.");
-
-            var response = _data.ChangePassword(username, newPassword, oldPassword);
-            if (response.ResponseCode != WebServices.SDK.Abstractions.Models.Api.ResponseCode.Success)
-                throw new Exception(response.Message);
-                */
             return false;
         }
     }

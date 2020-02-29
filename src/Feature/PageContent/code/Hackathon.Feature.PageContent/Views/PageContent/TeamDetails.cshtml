@@ -1,8 +1,66 @@
-﻿@model Hackathon.Foundation.Teams.Models.Team
+﻿@model Hackathon.Feature.PageContent.Models.ViewModels.TeamDetailsViewModel
 
-@if (Model != null)
+@if (Model != null && Model.Team != null)
 {
+    <div id="fh5co-intro-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 animate-box text-center">
+                    <h2 class="intro-heading">@Model.Team.Name</h2>
+                    @if (!string.IsNullOrEmpty(Model.Team.Url))
+                    {
+                        <p><a href="@Model.Team.Url">View on Github</a></p>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <p>Displaying info about a specific team named @Model.Name</p>
+
+    <div id="fh5co-about-section">
+        <div class="container">
+            <div class="row animate-box">
+                <div class="col-xs-12 text-center animate-box">
+                    <div class="about-content">
+                        <p>@Model.Team.Description</p>
+                    </div>
+                </div>
+            </div>
+
+            @if (Model.TeamMembers != null && Model.TeamMembers.Any())
+            {
+                <div class="row">
+                    <div class="col-xs-12 text-center animate-box ">
+                        <div class="heading-section">
+                            <h2>Team Members</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+
+                    @foreach (var teamMember in Model.TeamMembers)
+                    {
+                        <div class="col-md-4 col-sm-4 animate-box">
+                            <div class="fh5co-staff">
+                                <h3>@teamMember.FirstName @teamMember.LastName</h3>
+                                <span class="role">Github: @teamMember.GithubId</span>
+                                @*
+                                <ul class="fh5co-social-icons">
+                                    <li><a href="#"><i class="icon-facebook3"></i></a></li>
+                                    <li><a href="#"><i class="icon-twitter2"></i></a></li>
+                                    <li><a href="#"><i class="icon-dribbble2"></i></a></li>
+                                    <li><a href="#"><i class="icon-github"></i></a></li>
+                                </ul>
+                                 *@
+                            </div>
+                        </div>
+                    }
+
+                </div>
+        }
+
+        </div>
+    </div>
+
 
 }

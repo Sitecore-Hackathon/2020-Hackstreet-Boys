@@ -226,8 +226,6 @@ namespace Hackathon.Foundation.Teams.Repositories
             return null;
         }
 
-        
-
         public Team GetTeamFromItem(Item item)
         {
             return new Team()
@@ -237,6 +235,17 @@ namespace Hackathon.Foundation.Teams.Repositories
                 Slug = item[Hackathon.Foundation.Teams.Constants.Templates.Team.Slug],
                 Description = item[Hackathon.Foundation.Teams.Constants.Templates.Team.Description],
                 Url = item[Hackathon.Foundation.Teams.Constants.Templates.Team.Url],
+            };
+        }
+
+        public TeamMember GetTeamMemberFromItem(Item item)
+        {
+            return new TeamMember()
+            {
+                FirstName = item[Constants.Templates.TeamMember.FirstName],
+                LastName = item[Constants.Templates.TeamMember.LastName],
+                Email = item[Constants.Templates.TeamMember.Email],
+                GithubId = item[Constants.Templates.TeamMember.GithubId]
             };
         }
     }

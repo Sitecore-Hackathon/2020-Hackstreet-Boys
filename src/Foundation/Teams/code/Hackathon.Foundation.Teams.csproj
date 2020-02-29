@@ -95,6 +95,7 @@
     <Compile Include="Models\AddMemberToRepo.cs" />
     <Compile Include="Models\CreateOrganizationTeamResponse.cs" />
     <Compile Include="Models\CreateTeamRepo.cs" />
+    <Compile Include="Models\TeamMember.cs" />
     <Compile Include="Models\Team.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Constants.cs" />

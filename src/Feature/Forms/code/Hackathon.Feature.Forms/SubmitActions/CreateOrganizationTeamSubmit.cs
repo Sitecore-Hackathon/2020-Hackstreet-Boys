@@ -6,6 +6,7 @@ using Sitecore.ExperienceForms.Processing;
 using Sitecore.ExperienceForms.Processing.Actions;
 using static Hackathon.Feature.Forms.Helper.SubmitActionHelper;
 using Hackathon.Foundation.Teams.Repositories;
+using Hackathon.Foundation.Account.Services;
 
 namespace Hackathon.Feature.Forms.SubmitActions
 {
@@ -41,31 +42,19 @@ namespace Hackathon.Feature.Forms.SubmitActions
         {
             var teamName = fields.GetFieldValue("TeamName");
             var teamDescription = fields.GetFieldValue("TeamDescription");
-
-            if (!string.IsNullOrEmpty(teamName) && !string.IsNullOrEmpty(teamDescription))
+            var loginUser = new LoginUser();
+            var githubUsername = loginUser.GetCurrentUserGithub();
+            if (!string.IsNullOrEmpty(teamName) && !string.IsNullOrEmpty(teamDescription) && !string.IsNullOrEmpty(githubUsername))
             {
                 var teamsRepo = new TeamsRepository();
-                var githubUsername = "kvn-prhn";
-
+                
                 var newTeamItem = teamsRepo.CreateHackathonTeam(teamName, githubUsername, teamDescription);
 
-                return true;
+                if (newTeamItem != null)
+                {
+                    return true;
+                }
             }
-            /*
-            var username = _user.CurrentProfile?.ProfileUser?.LocalName;
-            if (string.IsNullOrWhiteSpace(username))
-                throw new System.UnauthorizedAccessException("Please log-in to change your password");
-
-            var newPassword = fields.GetFieldValue("New Password");
-            Assert.ArgumentNotNull(newPassword, "You should fill in the 'New Password' field.");
-
-            var oldPassword = fields.GetFieldValue("Old Password");
-            Assert.ArgumentNotNull(oldPassword, "You should fill in the 'Old Password' field.");
-
-            var response = _data.ChangePassword(username, newPassword, oldPassword);
-            if (response.ResponseCode != WebServices.SDK.Abstractions.Models.Api.ResponseCode.Success)
-                throw new Exception(response.Message);
-                */
 
             return false;
         }

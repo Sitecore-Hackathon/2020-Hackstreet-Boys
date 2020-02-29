@@ -88,6 +88,7 @@
     <Compile Include="Models\ViewModels\MenuViewModel.cs" />
     <Compile Include="Models\ViewModels\RichTextContentViewModel.cs" />
     <Compile Include="Models\ViewModels\StatCounterViewModel.cs" />
+    <Compile Include="Models\ViewModels\TeamDetailsViewModel.cs" />
     <Compile Include="Models\ViewModels\TeamAdminViewModel.cs" />
     <Compile Include="Models\ViewModels\TeamListViewModel.cs" />
     <Compile Include="Models\ViewModels\TwoChoiceViewModel.cs" />
