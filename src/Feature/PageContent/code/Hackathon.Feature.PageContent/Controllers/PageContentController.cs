@@ -209,23 +209,27 @@ namespace Hackathon.Feature.PageContent.Controllers
 
         public ActionResult StatCounter()
         {
+            var ds = Sitecore.Context.Database.GetItem(RenderingContext.CurrentOrNull.Rendering.DataSource);
+            if (ds == null)
+                return View();
+
             var viewModel = new StatCounterViewModel()
             {
                 StatBlocks = new List<StatBlock>()
             };
             viewModel.StatBlocks.Add(new StatBlock()
             {
-                Label = "Users",
+                Label = ds["Users Text"],
                 Value = _teamsRepository.GetTeamMemberCount()
             });
             viewModel.StatBlocks.Add(new StatBlock()
             {
-                Label = "Countries",
+                Label = ds["Countries Text"],
                 Value = 39
             });
             viewModel.StatBlocks.Add(new StatBlock()
             {
-                Label = "Teams",
+                Label = ds["Teams Text"],
                 Value = _teamsRepository.GetTeamsCount()
             });
             return View(viewModel); 

@@ -1,0 +1,14 @@
+﻿---
+ID: "19efb5ec-f674-4a18-a938-38c2a696984b"
+Parent: "943d19df-0776-43a6-bb00-9951d275620b"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/Feature/PageContent/Stat Counter/Stat Counter Section
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200229T231232Z
