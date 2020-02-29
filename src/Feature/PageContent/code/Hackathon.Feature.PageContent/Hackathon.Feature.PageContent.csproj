@@ -114,6 +114,10 @@
       <Project>{2f3b82be-a3fb-4942-960b-5be646efb623}</Project>
       <Name>Hackathon.Foundation.Hackstreet</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Foundation\Teams\code\Hackathon.Foundation.Teams.csproj">
+      <Project>{40beea71-b393-4778-b3cb-2fc791b65ceb}</Project>
+      <Name>Hackathon.Foundation.Teams</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
