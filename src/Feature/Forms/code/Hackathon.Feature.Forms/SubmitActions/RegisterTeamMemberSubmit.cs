@@ -79,7 +79,7 @@ namespace Hackathon.Feature.Forms.SubmitActions
                 && !string.IsNullOrEmpty(password) && !string.IsNullOrEmpty(githubUser))
             {
                 var loginUser = new LoginUser();
-                var registerResponse = loginUser.Register(email, password, firstName, lastName, "", twitterUser, githubUser, linkedInUser);
+                var registerResponse = loginUser.Register(email, password, firstName, lastName, twitterUser, githubUser, linkedInUser);
                 // make the sitecore user
 
                 // make the connected team member item

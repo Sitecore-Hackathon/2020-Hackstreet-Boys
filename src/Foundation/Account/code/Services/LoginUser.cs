@@ -10,11 +10,11 @@ namespace Hackathon.Foundation.Account.Services
 {
     public class LoginUser
     {
-        public bool Register(string email, string password, string firstName, string lastName, string country, string twitterHandle, string githubUsername, string linkedInUsername)
+        public bool Register(string email, string password, string firstName, string lastName, string twitterHandle, string githubUsername, string linkedInUsername)
         {
             //var isRegistered = false;
 
-            if (AddUser(email, password, firstName, lastName, country, twitterHandle, githubUsername, linkedInUsername))
+            if (AddUser(email, password, firstName, lastName, twitterHandle, githubUsername, linkedInUsername))
             {
                 //isRegistered = true;
                 return Login(email, password);
@@ -36,7 +36,7 @@ namespace Hackathon.Foundation.Account.Services
             return false;
         }
 
-        private bool AddUser(string email, string password, string firstName, string lastName, string twitterHandle, string githubUsername, string linkedInUsername, string country)
+        private bool AddUser(string email, string password, string firstName, string lastName, string twitterHandle, string githubUsername, string linkedInUsername)
         {
             string userName = email;
             var success = false;
@@ -59,11 +59,10 @@ namespace Hackathon.Foundation.Account.Services
 
                     // Assigning the user profile template
                     userProfile.SetPropertyValue("ProfileItemId", "{BBCCF1F4-A638-4FE3-9B2E-8E5D7D73AE9E}");
-
-                    userProfile.SetCustomProperty("Country", country);
-                    userProfile.SetCustomProperty("Twitter Handle", twitterHandle);
+                    
+                    userProfile.SetCustomProperty("Twitter Handle", twitterHandle != null ? twitterHandle : string.Empty);
                     userProfile.SetCustomProperty("Github Username", githubUsername);
-                    userProfile.SetCustomProperty("LinkedIn Username", linkedInUsername);
+                    userProfile.SetCustomProperty("LinkedIn Username", linkedInUsername != null ? linkedInUsername : string.Empty);
                     userProfile.Save();
 
                     success = true;
