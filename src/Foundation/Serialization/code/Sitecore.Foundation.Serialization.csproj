@@ -116,10 +116,6 @@
     <Content Include="App_Config\Modules\Unicorn\Unicorn.Remote.config.disabled" />
     <Content Include="App_Config\Modules\Unicorn\Unicorn.PowerShell.config" />
     <Content Include="App_Config\Modules\Unicorn\Unicorn.Dilithium.config.example" />
-    <Content Include="App_Config\Modules\Unicorn\Unicorn.Roles.DataProvider.config" />
-    <Content Include="App_Config\Modules\Unicorn\Unicorn.Roles.config" />
-    <Content Include="App_Config\Modules\Unicorn\Unicorn.Users.DataProvider.config" />
-    <Content Include="App_Config\Modules\Unicorn\Unicorn.Users.config" />
     <Content Include="App_Config\Modules\Unicorn\Unicorn.Deployed.config">
       <SubType>Designer</SubType>
     </Content>
