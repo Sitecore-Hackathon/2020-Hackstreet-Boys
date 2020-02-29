@@ -1,0 +1,29 @@
+﻿---
+ID: "30d85be2-01f0-41b9-b4b7-d0fc6d42ca51"
+Parent: "511ab80c-f105-4fef-bb8f-ce55c1064c8c"
+Template: "a87a00b1-e6db-45ab-8b54-636fec3b5523"
+Path: /sitecore/content/TempGlobal/Teams
+DB: master
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Type: TreelistEx
+  Value: "{CD253AE6-D649-4AE8-A875-AF4ADDD42F6C}"
+- ID: "a0cb3965-8884-4c7a-8815-b6b2e5ced162"
+  Hint: __Editors
+  Type: TreelistEx
+  Value: |
+    {59F53BBB-D1F5-4E38-8EBA-0D73109BB59B}
+    {A0C460F4-DBAE-4A5A-8F3A-C4ADFCDACEEA}
+- ID: "d312103c-b36c-4ca5-864a-c85f9abda503"
+  Hint: __Is Bucket
+  Type: Checkbox
+  Value: 1
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200229T120458Z

@@ -119,6 +119,7 @@
     <Content Include="assets\fonts\icomoon\icomoon\selection.json" />
     <Content Include="App_Config\Include\Project\Project.Common.Serialization.config" />
     <Content Include="Views\web.config" />
+    <Content Include="Views\Common\Container.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -134,10 +135,17 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Feature\PageContent\code\Hackathon.Feature.PageContent\Hackathon.Feature.PageContent.csproj">
+      <Project>{8d9dd402-7aa4-4b39-9a9e-b096e31393cb}</Project>
+      <Name>Hackathon.Feature.PageContent</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\Foundation\Teams\code\Hackathon.Foundation.Teams.csproj">
       <Project>{2f3b82be-a3fb-4942-960b-5be646efb623}</Project>
       <Name>Hackathon.Foundation.Teams</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

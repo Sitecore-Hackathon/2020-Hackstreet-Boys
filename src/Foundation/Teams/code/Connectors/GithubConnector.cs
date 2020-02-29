@@ -26,6 +26,7 @@ namespace Hackathon.Foundation.Teams.Connectors
 
             HttpRequestMessage request = new HttpRequestMessage(method, "https://api.github.com" + apiUrl );
             request.Headers.Add("Authorization", $"token {Sitecore.Configuration.Settings.GetSetting("hackathon.GithubPersonalAccessKey")}");
+            request.Headers.Add("User-Agent", $"{Sitecore.Configuration.Settings.GetSetting("hackathon.GitHubAppName")}");
             request.Headers.Accept.Add(new MediaTypeWithQualityHeaderValue("application/vnd.github.v3+json"));
             request.Content = new StringContent(contentObject.ToString(), Encoding.UTF8, "application/json");
 
@@ -42,7 +43,7 @@ namespace Hackathon.Foundation.Teams.Connectors
                     throw new Exception($"Unexpected status result {response.Headers.GetValues("Status")}");
                 }
 
-                ghLog.Append(" SUCCESS " + response.StatusCode);
+                ghLog.Append(" SUCCESS " + response.StatusCode.ToString());
                 Sitecore.Diagnostics.Log.Info(ghLog.ToString(), typeof(GithubConnector));
 
                 return JsonConvert.DeserializeObject<T>(responseBody);

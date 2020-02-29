@@ -56,7 +56,14 @@ namespace Hackathon.Feature.PageContent
 
                 public const string Label = "Label";
                 public const string Link = "Link";
+                public const string ShowOnlyWithLoggedInUser = "Show Only With Logged In User";
+                public const string HideWithLoggedInUser = "Hide With Logged In User";
             }
+        }
+
+        public struct Directories
+        {
+            public const string AssetsFolder = "/assets";
         }
     }
 }

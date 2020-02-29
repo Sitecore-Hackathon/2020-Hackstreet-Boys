@@ -1,0 +1,25 @@
+﻿---
+ID: "de2d8389-43df-44dc-ab3a-4ab23b0c8886"
+Parent: "7f65691b-a99e-4b97-b26b-e1856795f695"
+Template: "05fe45d4-b9c7-40de-b767-7c5abe7119f9"
+Path: /sitecore/Forms/Team Member Login/Page/Section/SubmitButton/SubmitActions/Login Team Member Submit
+DB: master
+SharedFields:
+- ID: "abc57b6d-5542-4ab9-a889-106225a032e6"
+  Hint: Submit Action
+  Value: "{34E579A7-A91E-49EB-B545-325A9EBA65A3}"
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 0
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200229T154042Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin

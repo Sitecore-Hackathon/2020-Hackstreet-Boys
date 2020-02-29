@@ -56,8 +56,7 @@
     <PackageReference Include="Sitecore.Kernel" Version="9.3.0" />
     <PackageReference Include="Sitecore.Logging" Version="9.3.0" />
     <PackageReference Include="Sitecore.Mvc" Version="9.3.0" />
-	<PackageReference Include="Sitecore.ExperienceForms" Version="9.3.0" />
-	
+    <PackageReference Include="Sitecore.ExperienceForms" Version="9.3.0" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="sysglobl" />
@@ -84,14 +83,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Helper\SubmitActionHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Config\Include\Feature\Feature.Forms.Serialization.config" />
+    <Compile Include="SubmitActions\RegisterTeamMemberSubmit.cs" />
+    <Compile Include="SubmitActions\LoginTeamMemberSubmit.cs" />
+    <Compile Include="SubmitActions\JoinOrganizationTeamSubmit.cs" />
     <Compile Include="SubmitActions\CreateOrganizationTeamSubmit.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Foundation\Teams\code\Hackathon.Foundation.Teams.csproj">
+      <Project>{2f3b82be-a3fb-4942-960b-5be646efb623}</Project>
+      <Name>Hackathon.Foundation.Teams</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -118,7 +127,6 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
-  
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

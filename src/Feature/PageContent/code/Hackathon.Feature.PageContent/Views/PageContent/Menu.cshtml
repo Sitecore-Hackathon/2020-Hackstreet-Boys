@@ -5,7 +5,20 @@
     <ul>
         @foreach (var menuLink in Model.MenuLinks)
         {
-            <li><a href="@menuLink.LinkUrl">@menuLink.Label</a></li>
+            bool showLink = !menuLink.HideWithLoggedInUser && !menuLink.ShowOnlyOnLogin;
+            if (menuLink.HideWithLoggedInUser)
+            {
+                showLink = !Model.UserLoggedIn;
+            }
+            else if (menuLink.ShowOnlyOnLogin)
+            {
+                showLink = Model.UserLoggedIn;
+            }
+            
+            if (showLink)
+            {
+                <li><a href="@menuLink.LinkUrl">@menuLink.Label</a></li>
+            }
         } 
     </ul>
 }

@@ -1,0 +1,30 @@
+﻿---
+ID: "e0a7fec1-5a33-4590-81d3-7776432ca66d"
+Parent: "a37309c9-6db6-4673-b1b4-98e4d880aecb"
+Template: "9a6802d0-3c3f-41c3-8198-b836aca27cfc"
+Path: /sitecore/content/Global/Members/Test test
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "13f4d625-4ac9-4b45-9128-20914aedc00e"
+      Hint: Last Name
+      Value: test
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200229T164101Z
+    - ID: "464ee9e0-12b4-4a5c-ad84-3eff8d76e751"
+      Hint: Email
+      Value: aa@aa.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        extranet\Anonymous
+    - ID: "c93c3ace-e81b-4592-995f-40ab55776f3e"
+      Hint: First Name
+      Value: Test
+    - ID: "dcccaf8e-69ea-4399-b4c7-37b8a84f7095"
+      Hint: Github Id
+      Value: "kvn-prhn"

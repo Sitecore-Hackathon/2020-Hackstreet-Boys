@@ -2,7 +2,7 @@
 ID: "468a5cbe-0b63-41dc-adb0-43ceed6ac699"
 Parent: "6fd22d51-d16b-48a2-b9c6-8e1aabb5179d"
 Template: "05fe45d4-b9c7-40de-b767-7c5abe7119f9"
-Path: /sitecore/Forms/Team Organization Create/Page/SubmitButton/SubmitActions/Create Organization Team Submit
+Path: /sitecore/Forms/Team Organization Create/Page/Section/SubmitButton/SubmitActions/Create Organization Team Submit
 DB: master
 SharedFields:
 - ID: "abc57b6d-5542-4ab9-a889-106225a032e6"

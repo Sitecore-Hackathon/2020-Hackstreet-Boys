@@ -1,0 +1,28 @@
+﻿---
+ID: "15febc60-a5a3-4cc3-934c-d49693e7345b"
+Parent: "fbe28aec-7221-4f46-a775-7e10e0e388ad"
+Template: "7e8bab72-0746-45e1-9152-12e2fdac3779"
+Path: /sitecore/content/Global/Datasources/Home/Home Full Hero
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200229T042150Z
+    - ID: "327621b1-fe67-42a9-8898-e9cbf8f631e3"
+      Hint: Main Text
+      Value: Challenge Yourself in our Hackathon
+    - ID: "3ab39cb0-adb1-4db8-a781-4c65cc1dfa09"
+      Hint: Image
+      Value: |
+        <image mediaid="{A2F13722-2E9E-4BC9-AACE-7E381B34DA6B}" />
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "682ad8c7-e920-4061-9530-3dca549d1df3"
+      Hint: Sub Text
+      Value: Ha Ha Ha Ha Ha Ha Ha Ha Ha Ha Ha

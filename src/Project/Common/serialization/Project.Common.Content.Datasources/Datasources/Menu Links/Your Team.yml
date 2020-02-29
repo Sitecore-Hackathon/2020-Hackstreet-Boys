@@ -1,0 +1,37 @@
+﻿---
+ID: "6a7d7532-e0b7-4d23-85fd-e615df4b89e0"
+Parent: "b2b23194-4a10-4bfd-8e1a-bcd4a3c9ab57"
+Template: "08263923-7b27-4c12-8eb6-66fdf992c741"
+Path: /sitecore/content/Global/Datasources/Menu Links/Your Team
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 150
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200229T095439Z
+    - ID: "3f176e4c-82c7-493a-b554-894333956a21"
+      Hint: Link
+      Value: |
+        <link text="" anchor="" linktype="internal" class="" title=""  querystring="" id="{7ACCD364-E856-490C-91F9-457F205E3EF7}" />
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "a1565723-1ad5-42d7-bca3-ef893cc903b6"
+      Hint: Label
+      Value: Your Team
+    - ID: "a7e31ac0-2518-4033-9158-de9ec3a1f833"
+      Hint: Hide With Logged In User
+      Type: Checkbox
+      Value: 0
+    - ID: "c64eec78-58f8-49b3-82b1-18462d7b3365"
+      Hint: Show Only With Logged In User
+      Type: Checkbox
+      Value: 1

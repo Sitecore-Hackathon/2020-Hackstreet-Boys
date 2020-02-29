@@ -1,0 +1,18 @@
+﻿---
+ID: "02047da3-99d7-49e8-858a-a9204bcfe0ae"
+Parent: "9f04ab8e-3667-4645-819b-d22cada930c8"
+Template: "a5362412-2f45-41d7-b12a-cec798bf1b0d"
+Path: /sitecore/content/Global/Members
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200229T153754Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin

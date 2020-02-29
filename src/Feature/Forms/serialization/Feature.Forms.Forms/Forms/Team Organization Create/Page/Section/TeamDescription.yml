@@ -1,0 +1,37 @@
+﻿---
+ID: "5e5f71fc-a527-49e2-a6ee-bc4f5b1fd49f"
+Parent: "e0deb1ef-b38a-43dd-a54f-97c362b07354"
+Template: "d8386d04-c1e3-4cd3-9227-9e9f86ef3c88"
+Path: /sitecore/Forms/Team Organization Create/Page/Section/TeamDescription
+DB: master
+SharedFields:
+- ID: "467c22b4-b1a2-4620-b8bb-74c2d8b369fc"
+  Hint: Label Css Class
+  Value: "form-text"
+- ID: "71c6de8e-4718-4977-b83e-b49552ee14b0"
+  Hint: Conditions
+  Value: |
+    {"fieldConditions":[]}
+- ID: "7abaa3f6-6ec0-4b65-a463-7919bfae55aa"
+  Hint: Css Class
+  Value: "form-control"
+- ID: "84ece662-5034-40cb-9c60-744db64bb294"
+  Hint: Field Key
+  Value: B2B3D49C3DAB40ED9A50AEA5134874B7
+- ID: "9f7da002-7b86-436b-8dda-7efe5837b88e"
+  Hint: Min Length
+  Value: 0
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 100
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200229T080953Z
+    - ID: "71ffd7b2-8b09-4f7b-8a66-1e4cef653e8d"
+      Hint: Title
+      Value: Team Description

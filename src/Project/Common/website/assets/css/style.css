@@ -20,19 +20,22 @@
         text-decoration: none;
     }
 
-.team-box .team-info {
-    color: white;
+.team-box .team-info { 
     display: block;
     position: absolute;
-    top: 3.5em;
+    top: 1em;
     height: 7em;
     padding: 1em;
-    width: 100%;
-    margin-left: -50%;
+    width: 100%; 
     text-align: center; 
 }
 
-.team-info .team-name 
-{
+.team-info .team-name {
+    color: white;
+}
 
+
+.form-group .btn[type='submit']
+{
+    margin-top: 1em; 
 }
