@@ -1,0 +1,25 @@
+﻿---
+ID: "84c2a4fc-cc04-407a-8b86-68821ec78f42"
+Parent: "9867c25e-2344-4c36-969f-5aa5dbe10a45"
+Template: "c2d1d114-3cfe-4558-a9e3-d1a1ec0fcab7"
+Path: /sitecore/system/Settings/Forms/Submit Actions/Custom/Join Organization Team Submit
+DB: master
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: Office/32x32/revert_domain.png
+- ID: "2c6e7306-2871-473a-9149-71443182b8e8"
+  Hint: Model Type
+  Value: Hackathon.Feature.Forms.SubmitActions.JoinOrganizationTeamSubmit, Hackathon.Feature.Forms
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200229T075323Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin

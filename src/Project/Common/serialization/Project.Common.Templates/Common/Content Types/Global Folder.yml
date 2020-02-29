@@ -1,8 +1,8 @@
 ﻿---
 ID: "513c7264-08d0-4119-b100-4906f32bcf64"
-Parent: "f2d1066e-4d73-4dfb-8c10-cb711583c07b"
+Parent: "8c152bbf-fdc8-45b0-86ff-6507e68822e1"
 Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
-Path: /sitecore/templates/Foundation/Hackstreet/Global Folder
+Path: /sitecore/templates/Project/Common/Content Types/Global Folder
 DB: master
 SharedFields:
 - ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
