@@ -10,5 +10,10 @@ namespace Hackathon.Foundation.Hackstreet
           
             
         }
+
+        public struct Directories
+        {
+            public const string AssetsFolder = "/assets";
+        }
     }
 }

@@ -1,0 +1,11 @@
+﻿@model Hackathon.Feature.PageContent.Models.ViewModels.MenuViewModel
+
+@if (Model != null)
+{
+    <ul>
+        @foreach (var menuLink in Model.MenuLinks)
+        {
+            <li><a href="@menuLink.LinkUrl">@menuLink.Label</a></li>
+        } 
+    </ul>
+}

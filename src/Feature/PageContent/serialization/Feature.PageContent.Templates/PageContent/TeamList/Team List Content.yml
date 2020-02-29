@@ -1,0 +1,14 @@
+﻿---
+ID: "82adc679-6575-4a56-9ac1-83ccdce2c2de"
+Parent: "4e1e7491-3140-4cd0-aaa4-f0e2e4cb2ce8"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/Feature/PageContent/TeamList/Team List Content
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200229T045451Z

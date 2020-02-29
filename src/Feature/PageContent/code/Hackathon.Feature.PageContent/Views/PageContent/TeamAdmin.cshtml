@@ -1,0 +1,12 @@
+﻿@model Hackathon.Feature.PageContent.Models.ViewModels.TeamAdminViewModel
+
+@if (Model != null && Model.Team != null) { 
+
+    <p>
+        View admin details about a team named @Model.Team.Name
+    </p>
+
+    <p>
+        Special secret join key: @Model.SecretJoinString
+    </p>
+}

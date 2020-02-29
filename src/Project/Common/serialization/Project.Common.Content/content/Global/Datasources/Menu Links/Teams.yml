@@ -1,0 +1,25 @@
+﻿---
+ID: "2e354cd0-4599-41ba-9604-add10cec7301"
+Parent: "b2b23194-4a10-4bfd-8e1a-bcd4a3c9ab57"
+Template: "08263923-7b27-4c12-8eb6-66fdf992c741"
+Path: /sitecore/content/Global/Datasources/Menu Links/Teams
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200229T095439Z
+    - ID: "3f176e4c-82c7-493a-b554-894333956a21"
+      Hint: Link
+      Value: |
+        <link text="" anchor="teamslist" linktype="internal" class="" title=""  querystring="" id="{267F94DA-F8E8-4E03-BF45-C8919D758219}" />
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "a1565723-1ad5-42d7-bca3-ef893cc903b6"
+      Hint: Label
+      Value: Teams

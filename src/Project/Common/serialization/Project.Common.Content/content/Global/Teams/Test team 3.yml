@@ -1,0 +1,31 @@
+﻿---
+ID: "269f541f-4d12-43a5-9f76-13eb54bd37ef"
+Parent: "f3eaeeeb-5c35-467c-bbe3-78613fb19290"
+Template: "5e67be75-bdc1-495e-8bae-75df48d3b3db"
+Path: /sitecore/content/Global/Teams/Test team 3
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "0ea47bdc-9f35-41f1-8bf2-4a1134ffef6e"
+      Hint: slug
+      Value: "team-3"
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200229T033736Z
+    - ID: "4a80d16d-b489-4ff5-bfbb-b5458e903b23"
+      Hint: Team Name
+      Value: Test team 3
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "730613ec-6955-410a-a583-9122b56fa8f7"
+      Hint: Thumbnail
+      Value: |
+        <image mediaid="{5E95F8BC-5886-4A31-A45E-92AD1EF6E072}" />
+    - ID: "ac3ff9bb-32eb-4d12-9621-f652603fbb1f"
+      Hint: name
+      Value: Test team 3

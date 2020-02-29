@@ -1,0 +1,39 @@
+﻿@model Hackathon.Feature.PageContent.Models.ViewModels.TwoChoiceViewModel
+
+@if (Model != null)
+{
+    if (string.IsNullOrEmpty(Model.ChoiceKey))
+    {
+        <div class="two-choice">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3 text-center animate-box  fadeInUp animated">
+                        <div class="heading-section">
+                            <h2>@Model.Title</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+
+                    @Html.Partial("~/Views/PageContent/_Choice.cshtml", Model.Choice1)
+
+                    @Html.Partial("~/Views/PageContent/_Choice.cshtml", Model.Choice2)
+
+                </div>
+            </div>
+        </div>
+    }
+    else if (Model.ChoiceKey.Equals(Model.Choice1.ChoiceKey))
+    {
+        @Html.Sitecore().Placeholder("choice1")
+    }
+    else if (Model.ChoiceKey.Equals(Model.Choice2.ChoiceKey))
+    {
+        @Html.Sitecore().Placeholder("choice2")
+    }
+    else
+    {
+        <p>Error making choice</p>
+    }
+
+}
