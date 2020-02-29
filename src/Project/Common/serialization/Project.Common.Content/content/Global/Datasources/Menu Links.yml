@@ -1,0 +1,18 @@
+﻿---
+ID: "b2b23194-4a10-4bfd-8e1a-bcd4a3c9ab57"
+Parent: "7aad3ed3-c0af-4a35-be17-14384482672b"
+Template: "a5362412-2f45-41d7-b12a-cec798bf1b0d"
+Path: /sitecore/content/Global/Datasources/Menu Links
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200229T095020Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin

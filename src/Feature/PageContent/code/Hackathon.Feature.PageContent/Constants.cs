@@ -40,6 +40,23 @@ namespace Hackathon.Feature.PageContent
 
                 public const string Title = "Title";
             }
+
+            public struct TwoChoice
+            {
+                public const string TemplateId = "{EA160845-CD31-4DE2-A05A-1E0D8119F64C}";
+
+                public const string Title = "Title";
+                public const string Choice1Title = "Choice 1 Title";
+                public const string Choice2Title = "Choice 2 Title";
+            }
+
+            public struct MenuLink
+            {
+                public const string TemplateId = "{08263923-7B27-4C12-8EB6-66FDF992C741}";
+
+                public const string Label = "Label";
+                public const string Link = "Link";
+            }
         }
     }
 }

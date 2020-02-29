@@ -1,0 +1,14 @@
+﻿---
+ID: "3967926c-d9df-40e9-a9b7-99aefb92fcbe"
+Parent: "08263923-7b27-4c12-8eb6-66fdf992c741"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/Feature/PageContent/Menu Link/Menu Link Content
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200229T095243Z

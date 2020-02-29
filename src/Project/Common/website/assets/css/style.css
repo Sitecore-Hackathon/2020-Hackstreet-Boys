@@ -12,20 +12,27 @@
     background-color: #777777;
 }
 
-.team-box .team-name {
+.team-box .view {
+    text-decoration: none;
+}
+
+    .team-box .view:hover {
+        text-decoration: none;
+    }
+
+.team-box .team-info {
     color: white;
-    display: inline-block;
+    display: block;
     position: absolute;
     top: 3.5em;
     height: 7em;
-    margin-top: -3.5em;
+    padding: 1em;
+    width: 100%;
+    margin-left: -50%;
+    text-align: center; 
 }
 
-.team-box .view
+.team-info .team-name 
 {
-    text-decoration: none; 
-}
 
-.team-box .view:hover {
-    text-decoration: none;
 }

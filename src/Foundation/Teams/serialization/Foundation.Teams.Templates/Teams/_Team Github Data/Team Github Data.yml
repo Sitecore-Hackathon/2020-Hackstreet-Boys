@@ -1,0 +1,14 @@
+﻿---
+ID: "4e29e24f-5433-41e4-9963-be46d6d399ef"
+Parent: "dd2a56a7-613e-44c0-9672-a6dc4eeb7beb"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/Foundation/Teams/_Team Github Data/Team Github Data
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200229T072817Z

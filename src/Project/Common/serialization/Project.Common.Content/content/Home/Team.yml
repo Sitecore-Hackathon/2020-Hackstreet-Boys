@@ -1,0 +1,69 @@
+﻿---
+ID: "0e90dc26-7696-4a07-970f-b244d7809da4"
+Parent: "267f94da-f8e8-4e03-bf45-c8919d758219"
+Template: "360a59d5-a94f-4d6e-8941-a61aa72365e2"
+Path: /sitecore/content/Home/Team
+DB: master
+SharedFields:
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Type: layout
+  Value: |
+    <r xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
+        l="{3F2A3BDB-2003-4280-B519-FDC9580E6090}">
+        <r
+          id="{57252A1D-3C3E-43A2-9027-AB22E6503A21}"
+          ph="header"
+          uid="{FD5B0C4F-CB64-4272-8C3E-0534BC3DEBBD}" />
+        <r
+          id="{6B5B0FE6-5C85-4487-BA7E-F8C2ECC186A8}"
+          ph="content"
+          uid="{8E995156-8D73-4212-9926-BCB1E1E98D9E}" />
+        <r
+          id="{EDA26AD6-641D-4F46-93AB-91CAF3A30136}"
+          ph="footer"
+          uid="{803001F3-3D63-4F11-A35F-E71190A05E39}" />
+      </d>
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Type: Layout
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{8E995156-8D73-4212-9926-BCB1E1E98D9E}">
+              <p:d />
+            </r>
+            <r
+              uid="{C2036692-A15D-4FA4-8CC4-56E23CC60720}"
+              p:after="r[@uid='{FD5B0C4F-CB64-4272-8C3E-0534BC3DEBBD}']"
+              s:ds="{B2B23194-4A10-4BFD-8E1A-BCD4A3C9AB57}"
+              s:id="{F5F15C13-7F86-40EC-B2B7-412BCC33FE56}"
+              s:par=""
+              s:ph="/header/menu" />
+            <r
+              uid="{81615E60-91D1-4922-871B-31AF3BB7998D}"
+              p:after="r[@uid='{C2036692-A15D-4FA4-8CC4-56E23CC60720}']"
+              s:ds="{5586A139-37BB-4228-99EC-9AA4E8B525EE}"
+              s:id="{4ABCB71B-13AA-4DD5-B8B1-1386EFD3D02C}"
+              s:par=""
+              s:ph="content" />
+          </d>
+        </r>
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200229T082220Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin

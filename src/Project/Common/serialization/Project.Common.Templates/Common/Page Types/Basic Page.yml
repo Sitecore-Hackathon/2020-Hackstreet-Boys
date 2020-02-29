@@ -1,0 +1,42 @@
+﻿---
+ID: "360a59d5-a94f-4d6e-8941-a61aa72365e2"
+Parent: "80704e70-b3e5-45af-b83b-2c4f572493ff"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Project/Common/Page Types/Basic Page
+DB: master
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: Office/32x32/text.png
+- ID: "12c33f3f-86c5-43a5-aeb4-5598cec45116"
+  Hint: __Base template
+  Type: tree list
+  Value: |
+    {1930BBEB-7805-471A-A3BE-4858AC7CF696}
+    {C9C54D18-7A75-4884-970B-088F9B86C963}
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Type: layout
+  Value: |
+    <r xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
+        l="{3F2A3BDB-2003-4280-B519-FDC9580E6090}">
+        <r
+          id="{57252A1D-3C3E-43A2-9027-AB22E6503A21}"
+          ph="header"
+          uid="{5557F478-1A0C-4DC9-9053-1C1FB1A89255}" />
+        <r
+          id="{EDA26AD6-641D-4F46-93AB-91CAF3A30136}"
+          ph="footer"
+          uid="{BCC9D32D-D87A-4F8C-9553-E8A02C46C204}" />
+      </d>
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200229T081615Z

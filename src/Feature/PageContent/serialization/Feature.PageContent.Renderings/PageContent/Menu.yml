@@ -1,0 +1,21 @@
+﻿---
+ID: "f5f15c13-7f86-40ec-b2b7-412bcc33fe56"
+Parent: "a72d4f09-8b10-4837-a585-3942b0e28170"
+Template: "2a3e91a0-7987-44b5-ab34-35c2d9de83b9"
+Path: /sitecore/layout/Renderings/Feature/PageContent/Menu
+DB: master
+SharedFields:
+- ID: "ded9e431-3604-4921-a4b3-a6ec7636a5b6"
+  Hint: Controller Action
+  Value: Menu
+- ID: "e64ad073-dfcc-4d20-8c0b-fe5aa6226cd7"
+  Hint: Controller
+  Value: Hackathon.Feature.PageContent.Controllers.PageContentController, Hackathon.Feature.PageContent
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200229T032158Z

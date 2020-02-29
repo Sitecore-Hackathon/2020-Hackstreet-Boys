@@ -36,6 +36,8 @@ namespace Hackathon.Foundation.Teams.Services
             body.team_id = teamId;
             body.visibility = "public";
 
+            // create associated sitecore item? 
+
             CreateTeamRepo response = GithubConnector.ExecuteRequest<CreateTeamRepo>(HttpMethod.Put, apiUrl, body, "201 Created");
             return response;
         }

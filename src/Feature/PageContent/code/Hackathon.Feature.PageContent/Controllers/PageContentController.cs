@@ -8,11 +8,21 @@ using Sitecore.Data.Items;
 using Sitecore.Resources.Media;
 using Sitecore.Data.Fields;
 using Sitecore.Mvc.Presentation;
+using Sitecore.Configuration;
+using Hackathon.Foundation.Teams.Models;
+using Hackathon.Foundation.Teams.Repositories;
+using Sitecore.Links;
 
 namespace Hackathon.Feature.PageContent.Controllers
 {
     public class PageContentController : Controller
     {
+        private TeamsRepository _teamsRepository;
+
+        public PageContentController()
+        {
+            _teamsRepository = new TeamsRepository(); 
+        }
 
         public ActionResult Header()
         {
@@ -44,26 +54,12 @@ namespace Hackathon.Feature.PageContent.Controllers
             {
                 if (child.TemplateID.ToString() == Constants.Templates.Team.TemplateId)
                 {
-                    viewModel.Teams.Add(new Team()
-                    {
-                        Name = child[Constants.Templates.Team.TeamName],
-                        ThumbnailUrl = GetMediaUrlFromId((ImageField)child.Fields[Constants.Templates.Team.Thumbnail])
-                    });
+                    viewModel.Teams.Add(_teamsRepository.GetTeamFromItem(child));
                 }
             }
-            /*
-            viewModel.Teams.Add(new Team() { Name = "Test tsdfasdfeaam *324*(%" });
-            viewModel.Teams.Add(new Team() { Name = "Test team *(2*(%" });
-            viewModel.Teams.Add(new Team() { Name = "Tesasdft team 324*(%" });
-            viewModel.Teams.Add(new Team() { Name = "Testasdfaseam *(43(%" });
-            viewModel.Teams.Add(new Team() { Name = "Test asTest team *(*(%" });
-            viewModel.Teams.Add(new Team() { Name = "Test team *(234%" });
-            viewModel.Teams.Add(new Team() { Name = "Test team *(*(%" });
-            */ 
             return View(viewModel); 
         }
-
-
+        
         public ActionResult FullHero()
         {
             var ds = Sitecore.Context.Database.GetItem(RenderingContext.CurrentOrNull.Rendering.DataSource);
@@ -92,23 +88,116 @@ namespace Hackathon.Feature.PageContent.Controllers
             return View(viewModel); 
         }
 
-
+        /// <summary>
+        /// Choose between two choices. Depending on the choice, either placeholder choice1 or choice2 will appear in its place
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
         public ActionResult TwoChoice()
         {
+            var ds = Sitecore.Context.Database.GetItem(RenderingContext.CurrentOrNull.Rendering.DataSource);
+            if (ds == null || ds.TemplateID.ToString() != Constants.Templates.TwoChoice.TemplateId)
+                return View();
 
             var viewModel = new TwoChoiceViewModel()
             {
-                Title = "MAKE A DECISION JFKSDFSD",
+                Title = ds[Constants.Templates.TwoChoice.Title],
                 Choice1 = new ChoiceViewModel()
                 {
-                    Title = "CHOICE 1"
+                    Title = ds[Constants.Templates.TwoChoice.Choice1Title],
+                    ChoiceKey = "1"
                 },
                 Choice2 = new ChoiceViewModel()
                 {
-                    Title = "CHOCIE @@@@22222@@@@"
+                    Title = ds[Constants.Templates.TwoChoice.Choice2Title],
+                    ChoiceKey = "2"
                 }
-            };
+            }; 
+            return View(viewModel); 
+        }
 
+        [HttpPost]
+        public ActionResult TwoChoice(TwoChoiceViewModel model)
+        {
+            return View(model);
+        }
+
+        /// <summary>
+        /// View a team as an admin (will automatically grab the team of the logged in user)
+        /// </summary>
+        public ActionResult TeamAdmin()
+        {
+            // TODO: get the currently logged in user 
+            string loggedInUser = "logged in user";
+
+            if (loggedInUser == null)
+            {
+                // redirect to login page
+                return Redirect("/Login"); 
+            }
+            else
+            {
+                bool userOnTeam = false;
+                if (!userOnTeam)
+                {
+                    return Redirect("/AssignTeam");
+                }
+
+                // get team details 
+                var viewModel = new TeamAdminViewModel()
+                {
+                    Team = new Team()  // use GetTeamFromItem() in teams repository
+                    {
+                        Name = "Logged in user's team name" 
+                    },
+                    SecretJoinString = "Secret join string"
+                };
+                return View(viewModel); 
+            }
+        }
+
+        /// <summary>
+        /// Just for viewing superficial information about a team (no admin) 
+        /// </summary>
+
+        public ActionResult TeamDetails(string team)
+        {
+            var teamMatch = _teamsRepository.GetMatchingTeamWithSlug(team);
+
+            if (teamMatch != null)
+            {
+                return View(teamMatch);
+            }
+
+            // no matching team found :( 
+            return View(); 
+        }
+
+        public ActionResult Menu()
+        {
+            var ds = Sitecore.Context.Database.GetItem(RenderingContext.CurrentOrNull.Rendering.DataSource);
+            if (ds == null)
+                return View();
+
+            var viewModel = new MenuViewModel()
+            {
+                MenuLinks = ds.Children
+                    .Where(c => c.TemplateID.ToString() == Constants.Templates.MenuLink.TemplateId)
+                    .Select(c => {
+                        var linkField = (LinkField)c.Fields[Constants.Templates.MenuLink.Link];
+                        var linkUrl = string.Empty;
+                        if (linkField.IsInternal)
+                        {
+                            linkUrl = LinkManager.GetItemUrl(linkField.TargetItem);
+                        }
+                        return new MenuLink()
+                        {
+                            Label = c[Constants.Templates.MenuLink.Label],
+                            LinkUrl = linkUrl + (!string.IsNullOrEmpty(linkField.Anchor) ? "#" + linkField.Anchor : string.Empty)
+                        };
+                    })
+                    .ToList()
+            };
             return View(viewModel); 
         }
 

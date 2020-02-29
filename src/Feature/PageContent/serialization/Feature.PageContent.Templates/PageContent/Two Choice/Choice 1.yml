@@ -1,0 +1,14 @@
+﻿---
+ID: "13df704f-fca4-4989-a347-7ea91e21090a"
+Parent: "ea160845-cd31-4de2-a05a-1e0d8119f64c"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/Feature/PageContent/Two Choice/Choice 1
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200229T083649Z

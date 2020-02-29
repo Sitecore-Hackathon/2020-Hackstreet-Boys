@@ -247,18 +247,21 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App_Start\RazorGeneratorMvcStart.cs" />
     <Compile Include="Constants.cs" />
     <Compile Include="Controllers\PageContentController.cs" />
-    <Compile Include="Models\Team.cs" />
     <Compile Include="Models\ViewModels\FullHeroViewModel.cs" />
+    <Compile Include="Models\ViewModels\MenuViewModel.cs" />
     <Compile Include="Models\ViewModels\RichTextContentViewModel.cs" />
+    <Compile Include="Models\ViewModels\TeamAdminViewModel.cs" />
     <Compile Include="Models\ViewModels\TeamListViewModel.cs" />
     <Compile Include="Models\ViewModels\TwoChoiceViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Content Include="Views\PageContent\TeamAdmin.cshtml" />
+    <Content Include="Views\PageContent\Menu.cshtml" />
     <None Include="Views\PageContent\TwoChoice.cshtml" />
     <None Include="Views\PageContent\RichTextContent.cshtml" />
     <Content Include="Views\PageContent\_Choice.cshtml" />
+    <Content Include="Views\PageContent\TeamDetails.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Config\Include\Feature\Feature.PageContent.Serialization.config" />
@@ -270,9 +273,9 @@
     <Content Include="Views\PageContent\FullHero.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\Foundation\Hackstreet\code\Hackathon.Foundation.Hackstreet.csproj">
+    <ProjectReference Include="..\..\..\..\Foundation\Teams\code\Hackathon.Foundation.Teams.csproj">
       <Project>{2f3b82be-a3fb-4942-960b-5be646efb623}</Project>
-      <Name>Hackathon.Foundation.Hackstreet</Name>
+      <Name>Hackathon.Foundation.Teams</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
