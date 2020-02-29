@@ -1,0 +1,14 @@
+﻿---
+ID: "c3cb2696-3d49-4828-9486-9c88cf5a47e4"
+Parent: "2382c00b-b53f-4d7c-8657-06697df33069"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/Feature/PageContent/Header/Header Section
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200229T223748Z
