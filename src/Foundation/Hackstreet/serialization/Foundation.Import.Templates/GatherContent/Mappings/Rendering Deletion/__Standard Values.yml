@@ -1,0 +1,18 @@
+﻿---
+ID: "c7bd4714-05a0-4b5f-a62a-01c82d493db5"
+Parent: "4d510645-af26-49d3-8621-8f55d328617c"
+Template: "4d510645-af26-49d3-8621-8f55d328617c"
+Path: /sitecore/templates/Foundation/GatherContent/Mappings/Rendering Deletion/__Standard Values
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20170918T221758Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\jgregory
