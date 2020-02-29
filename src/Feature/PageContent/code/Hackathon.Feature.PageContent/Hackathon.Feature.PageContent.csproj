@@ -111,6 +111,10 @@
     <Content Include="Views\PageContent\FullHero.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Foundation\Account\code\Hackathon.Foundation.Account.csproj">
+      <Project>{BD4C33C3-BA06-4EBD-B602-A672DBF016B7}</Project>
+      <Name>Hackathon.Foundation.Account</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\..\Foundation\Hackstreet\code\Hackathon.Foundation.Hackstreet.csproj">
       <Project>{2f3b82be-a3fb-4942-960b-5be646efb623}</Project>
       <Name>Hackathon.Foundation.Hackstreet</Name>

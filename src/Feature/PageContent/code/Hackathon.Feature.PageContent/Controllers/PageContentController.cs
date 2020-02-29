@@ -12,16 +12,19 @@ using Sitecore.Configuration;
 using Hackathon.Foundation.Teams.Models;
 using Hackathon.Foundation.Teams.Repositories;
 using Sitecore.Links;
+using Hackathon.Foundation.Account.Services;
 
 namespace Hackathon.Feature.PageContent.Controllers
 {
     public class PageContentController : Controller
     {
         private TeamsRepository _teamsRepository;
+        private LoginUser _loginUser;
 
         public PageContentController()
         {
-            _teamsRepository = new TeamsRepository(); 
+            _teamsRepository = new TeamsRepository();
+            _loginUser = new LoginUser(); 
         }
 
         public ActionResult Header()
@@ -128,29 +131,28 @@ namespace Hackathon.Feature.PageContent.Controllers
         public ActionResult TeamAdmin()
         {
             // TODO: get the currently logged in user 
-            string loggedInUser = "logged in user";
+            string loggedInGitUser = _loginUser.GetCurrentUserGithub(); 
 
-            if (loggedInUser == null)
+            if (string.IsNullOrEmpty(loggedInGitUser))
             {
                 // redirect to login page
                 return Redirect("/Login"); 
             }
             else
             {
-                bool userOnTeam = false;
-                if (!userOnTeam)
+                var userTeam = _teamsRepository.GetMyTeam(loggedInGitUser);
+
+                if (userTeam == null)
                 {
                     return Redirect("/AssignTeam");
                 }
 
                 // get team details 
+                var userTeamBuilt = _teamsRepository.GetTeamFromItem(userTeam);
                 var viewModel = new TeamAdminViewModel()
                 {
-                    Team = new Team()  // use GetTeamFromItem() in teams repository
-                    {
-                        Name = "Logged in user's team name" 
-                    },
-                    SecretJoinString = "Secret join string"
+                    Team = userTeamBuilt,
+                    SecretJoinString = userTeamBuilt.Slug
                 };
                 return View(viewModel); 
             }
@@ -184,7 +186,7 @@ namespace Hackathon.Feature.PageContent.Controllers
             if (ds == null)
                 return View();
 
-            string loggedInUser = "sdafsd"; 
+            string loggedInGitUser = _loginUser.GetCurrentUserGithub();
 
             var viewModel = new MenuViewModel()
             {
@@ -206,7 +208,7 @@ namespace Hackathon.Feature.PageContent.Controllers
                         };
                     })
                     .ToList(),
-                UserLoggedIn = loggedInUser != null
+                UserLoggedIn = !string.IsNullOrEmpty(loggedInGitUser)
             };
             return View(viewModel); 
         } 
