@@ -44,3 +44,10 @@ The provided package will include demo items that we will explain how it works a
 -  You have the option to join other teams, by going to /teams/join page and fill out the form, make sure that you have the correct team name (in github it's called slug name) and a valid github username
 - Once joined, you will be added to github team repo, and in Sitecore content tree a new item will be created inside /sitecore/content/global/Members/*
 - After joining or creating a team you will be able to see your team members from within the website after you log in.
+
+## Video:
+
+https://www.youtube.com/watch?v=tGimhgij-00
+
+[![Watch our video on Youtube](https://img.youtube.com/vi/tGimhgij-00/0.jpg)](https://www.youtube.com/watch?v=tGimhgij-00)
+
