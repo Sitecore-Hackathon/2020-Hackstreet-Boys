@@ -100,6 +100,13 @@
     <Compile Include="Constants.cs" />
     <Compile Include="Repositories\TeamsRepository.cs" />
     <Compile Include="Services\GithubService.cs" />
+    <Compile Include="TestMe.aspx.cs">
+      <DependentUpon>TestMe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TestMe.aspx.designer.cs">
+      <DependentUpon>TestMe.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Utils.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -107,6 +114,7 @@
     <Content Include="App_Config\Include\Foundation\Foundation.Teams.Serialization.config">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="TestMe.aspx" />
     <None Include="Properties\PublishProfiles\Local.pubxml" />
     <None Include="web.config" />
     <None Include="web.Debug.config">
