@@ -1,0 +1,22 @@
+﻿@model Hackathon.Feature.PageContent.Models.ViewModels.FullHeroViewModel
+
+@if (Model != null)
+{ 
+    <aside id="fh5co-hero" class="js-fullheight">
+        <div class="flexslider js-fullheight">
+            <ul class="slides">
+                <li style="background-image: url(@Model.ImageUrl);">
+                    <div class="overlay-gradient"></div>
+                    <div class="container">
+                        <div class="col-md-8 col-md-offset-2 col-md-push-4 js-fullheight slider-text">
+                            <div class="slider-text-inner">
+                                <h2>@Model.MainText</h2>
+                                <span>@Model.SubText</span>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </aside>
+}

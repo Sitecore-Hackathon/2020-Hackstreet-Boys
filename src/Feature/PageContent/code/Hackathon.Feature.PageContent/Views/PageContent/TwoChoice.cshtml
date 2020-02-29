@@ -1,0 +1,23 @@
+﻿@model Hackathon.Feature.PageContent.Models.ViewModels.TwoChoiceViewModel
+
+@if (Model != null)
+{
+    <div class="two-choice">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 text-center animate-box  fadeInUp animated">
+                    <div class="heading-section">
+                        <h2>@Model.Title</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+
+                @Html.Partial("~/Views/PageContent/_Choice.cshtml", Model.Choice1)
+
+                @Html.Partial("~/Views/PageContent/_Choice.cshtml", Model.Choice2)
+
+            </div>
+        </div>
+    </div>
+}
