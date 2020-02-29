@@ -9,7 +9,7 @@ using System.Text.RegularExpressions;
 using Sitecore;
 using Sitecore.Sites;
 
-namespace Hackathon.Foundation.Hackstreet.Client
+namespace Hackathon.Foundation.Teams.Client
 {
     public class Utils
     {

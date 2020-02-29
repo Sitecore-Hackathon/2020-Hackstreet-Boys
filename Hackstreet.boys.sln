@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.705
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hackathon.Foundation.Hackstreet", "src\Foundation\Hackstreet\code\Hackathon.Foundation.Hackstreet.csproj", "{2F3B82BE-A3FB-4942-960B-5BE646EFB623}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hackathon.Foundation.Teams", "src\Foundation\Teams\code\Hackathon.Foundation.Teams.csproj", "{2F3B82BE-A3FB-4942-960B-5BE646EFB623}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Foundation", "Foundation", "{E546E29B-E35D-44FF-8F2A-6D6E25037AB0}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Hackstreet", "Hackstreet", "{175BAAB8-C68C-4B17-A6AE-5A94FA09BF2F}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Teams", "Teams", "{175BAAB8-C68C-4B17-A6AE-5A94FA09BF2F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Serialization", "Serialization", "{60AEEC0C-5BDE-4CD5-8544-EC1B675ABF83}"
 EndProject
