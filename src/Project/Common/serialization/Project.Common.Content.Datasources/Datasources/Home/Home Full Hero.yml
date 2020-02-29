@@ -18,11 +18,11 @@ Languages:
     - ID: "3ab39cb0-adb1-4db8-a781-4c65cc1dfa09"
       Hint: Image
       Value: |
-        <image mediaid="{A2F13722-2E9E-4BC9-AACE-7E381B34DA6B}" />
+        <image mediaid="{7C297EA4-B686-47CA-8462-EF185BD7C73D}" />
     - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
       Hint: __Created by
       Value: |
         sitecore\Admin
     - ID: "682ad8c7-e920-4061-9530-3dca549d1df3"
       Hint: Sub Text
-      Value: Ha Ha Ha Ha Ha Ha Ha Ha Ha Ha Ha
+      Value: "Do you think you're up to the task? Sign up today and prove yourself, if you dare!"
