@@ -8,7 +8,7 @@ namespace Hackathon.Feature.Account.Controllers
 {
     public class AccountsController : Controller
     {
-
+        [HttpPost]
         public ActionResult Register()
         {
 

@@ -34,7 +34,7 @@ namespace Hackathon.Feature.Account.Models
 
         public string LinkedInUsername { get; set; }
 
-        public string ReturnUrl { get; set; }
+        //public string ReturnUrl { get; set; }
         //public IEnumerable<FedAuthLoginButton> LoginButtons { get; set; }
     }
 }
