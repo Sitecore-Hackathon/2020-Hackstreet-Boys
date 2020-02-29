@@ -44,3 +44,21 @@
     background-color: #555555;
     margin-bottom: 1em; 
 }
+
+.two-choice .choice-box a span {
+    color: white;
+}
+
+.two-choice .choice-box a {
+    text-decoration: none;
+}
+
+.two-choice .choice-box a:hover {
+    text-decoration: none;
+}
+
+.two-choice .choice-box .work 
+{
+    padding: 3em;
+    padding-top: 8em; 
+}
