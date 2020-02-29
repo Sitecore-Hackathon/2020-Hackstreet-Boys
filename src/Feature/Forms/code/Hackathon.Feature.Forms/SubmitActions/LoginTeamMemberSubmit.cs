@@ -3,7 +3,9 @@ using Sitecore.Diagnostics;
 using Sitecore.ExperienceForms.Models;
 using Sitecore.ExperienceForms.Processing;
 using Sitecore.ExperienceForms.Processing.Actions;
-using static System.FormattableString;
+using static Hackathon.Feature.Forms.Helper.SubmitActionHelper;
+using Hackathon.Foundation.Teams.Repositories;
+using System.Collections.Generic;
 
 namespace Hackathon.Feature.Forms.SubmitActions
 {
@@ -33,7 +35,35 @@ namespace Hackathon.Feature.Forms.SubmitActions
 
             // create a new team using the data?
 
+            Execute(formSubmitContext.Fields);
             return true;
+        }
+
+
+        public void Execute(IList<IViewModel> fields)
+        {
+            var email = fields.GetFieldValue("Email");
+            var password = fields.GetFieldValue("Password");
+
+            if (!string.IsNullOrEmpty(email) && !string.IsNullOrEmpty(password))
+            {
+                // login the sitecore user.
+            }
+            /*
+            var username = _user.CurrentProfile?.ProfileUser?.LocalName;
+            if (string.IsNullOrWhiteSpace(username))
+                throw new System.UnauthorizedAccessException("Please log-in to change your password");
+
+            var newPassword = fields.GetFieldValue("New Password");
+            Assert.ArgumentNotNull(newPassword, "You should fill in the 'New Password' field.");
+
+            var oldPassword = fields.GetFieldValue("Old Password");
+            Assert.ArgumentNotNull(oldPassword, "You should fill in the 'Old Password' field.");
+
+            var response = _data.ChangePassword(username, newPassword, oldPassword);
+            if (response.ResponseCode != WebServices.SDK.Abstractions.Models.Api.ResponseCode.Success)
+                throw new Exception(response.Message);
+                */
         }
     }
 }

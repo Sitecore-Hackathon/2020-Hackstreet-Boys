@@ -1,0 +1,14 @@
+﻿---
+ID: "2697b0d4-db97-4441-a0d8-66df592c93f5"
+Parent: "d4a41080-0685-49b2-b96a-64b427ff899e"
+Template: "a87a00b1-e6db-45ab-8b54-636fec3b5523"
+Path: /sitecore/Forms/Team Member Registration/Page/Section/Country/Settings
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200229T080729Z
