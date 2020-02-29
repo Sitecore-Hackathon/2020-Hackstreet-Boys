@@ -1,10 +1,13 @@
 ﻿---
-ID: "ebf4e545-07dd-48ed-a4b3-1dc805c33021"
+ID: "9a6802d0-3c3f-41c3-8198-b836aca27cfc"
 Parent: "46ee8d9e-7df1-48b2-b851-cfa74fede5b8"
 Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
-Path: /sitecore/templates/Foundation/Teams/_Team Member Github Data
+Path: /sitecore/templates/Foundation/Teams/Team Member
 DB: master
 SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: Apps/32x32/User.png
 - ID: "12c33f3f-86c5-43a5-aeb4-5598cec45116"
   Hint: __Base template
   Type: tree list
@@ -16,4 +19,4 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20200229T073412Z
+      Value: 20200229T035339Z
