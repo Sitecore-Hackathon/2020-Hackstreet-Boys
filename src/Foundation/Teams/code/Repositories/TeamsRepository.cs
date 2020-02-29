@@ -162,7 +162,7 @@ namespace Hackathon.Foundation.Teams.Repositories
             var teamsfolder = masterDb.GetItem(teamFolderPath);
             if (teamsfolder != null)
             {
-                var matchingTeam = teamsfolder.Children.FirstOrDefault(i => !string.IsNullOrEmpty(i[Hackathon.Foundation.Teams.Constants.Templates.Team.Slug]) &&
+                var matchingTeam = teamsfolder.Axes.GetDescendants().FirstOrDefault(i => !string.IsNullOrEmpty(i[Hackathon.Foundation.Teams.Constants.Templates.Team.Slug]) &&
                     i[Hackathon.Foundation.Teams.Constants.Templates.Team.Slug].ToLower() == teamSlug.ToLower());
 
                 return matchingTeam;
@@ -179,7 +179,7 @@ namespace Hackathon.Foundation.Teams.Repositories
             var teamMembersfolder = masterDb.GetItem(teamMembersFolderPath);
             if (teamMembersfolder != null)
             {
-                var matchingTeamMember = teamMembersfolder.Children.FirstOrDefault(i => !string.IsNullOrEmpty(i[Hackathon.Foundation.Teams.Constants.Templates.TeamMember.GithubId]) &&
+                var matchingTeamMember = teamMembersfolder.Axes.GetDescendants().FirstOrDefault(i => !string.IsNullOrEmpty(i[Hackathon.Foundation.Teams.Constants.Templates.TeamMember.GithubId]) &&
                     i[Hackathon.Foundation.Teams.Constants.Templates.TeamMember.GithubId].ToLower() == username.ToLower());
 
                 return matchingTeamMember;
@@ -195,7 +195,7 @@ namespace Hackathon.Foundation.Teams.Repositories
             var teamMembersfolder = masterDb.GetItem(teamMembersFolderPath);
             if (teamMembersfolder != null)
             {
-                return teamMembersfolder.Children.Count;
+                return teamMembersfolder.Axes.GetDescendants().Count(i => i.TemplateID.ToString() == Constants.Templates.TeamMember.TemplateId);
             }
             return 0;
         }
@@ -207,7 +207,7 @@ namespace Hackathon.Foundation.Teams.Repositories
             var teamsfolder = masterDb.GetItem(teamFolderPath);
             if (teamsfolder != null)
             {
-                return teamsfolder.Children.Count;
+                return teamsfolder.Axes.GetDescendants().Count(i => i.TemplateID.ToString() == Constants.Templates.Team.TemplateId);
             }
             return 0; 
         }
@@ -220,7 +220,7 @@ namespace Hackathon.Foundation.Teams.Repositories
                 var teamFolderPath = Settings.GetSetting(Constants.Settings.TeamsFolder);
                 var masterDb = Sitecore.Configuration.Factory.GetDatabase("master");
                 var teamsfolder = masterDb.GetItem(teamFolderPath);
-                var matchingTeam = teamsfolder.Children.FirstOrDefault(i => i.IsMyTeam(myMemberItem));
+                var matchingTeam = teamsfolder.Axes.GetDescendants().FirstOrDefault(i => i.IsMyTeam(myMemberItem));
                 return matchingTeam;
             }
             return null;

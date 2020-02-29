@@ -4,14 +4,11 @@
 {
 
     <div class="choice-box col-md-6 text-center animate-box fadeInUp animated">
-        <form method="post" class="choice-form">
-            <input type="hidden" name="ChoiceKey" value="@Model.ChoiceKey" />
-            <a href="#" class="view choice-submit">
-                <div class="work" style="background-image: url(/assets/images/img-1.jpg);">
-                    <span>@Model.Title</span>
-                </div>
-            </a>
-        </form>
+        <a href="@Model.ChoiceKey" class="view">
+            <div class="work" style="background-image: url(/assets/images/img-1.jpg);">
+                <span>@Model.Title</span>
+            </div>
+        </a>
     </div>
 
 }

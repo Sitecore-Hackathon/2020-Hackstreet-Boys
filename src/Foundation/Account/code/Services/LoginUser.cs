@@ -52,7 +52,7 @@ namespace Hackathon.Foundation.Account.Services
                    Membership.CreateUser(accountName, password, email);
 
                     // Edit the profile information
-                    User user = User.FromName(userName, true);
+                    User user = User.FromName(accountName, true);
                     Sitecore.Security.UserProfile userProfile = user.Profile;
                     userProfile.FullName = string.Format("{0} {1}", firstName, lastName);
                     //userProfile.Comment = comment;

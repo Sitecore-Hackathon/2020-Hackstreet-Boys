@@ -53,7 +53,7 @@ namespace Hackathon.Feature.PageContent.Controllers
                 Teams = new List<Team>()
             };
 
-            foreach (Item child in ds.Children)
+            foreach (Item child in ds.Axes.GetDescendants())
             {
                 if (child.TemplateID.ToString() == Hackathon.Foundation.Teams.Constants.Templates.Team.TemplateId)
                 {
@@ -108,21 +108,15 @@ namespace Hackathon.Feature.PageContent.Controllers
                 Choice1 = new ChoiceViewModel()
                 {
                     Title = ds[Constants.Templates.TwoChoice.Choice1Title],
-                    ChoiceKey = "1"
+                    ChoiceKey = "/AssignTeam/Create"
                 },
                 Choice2 = new ChoiceViewModel()
                 {
                     Title = ds[Constants.Templates.TwoChoice.Choice2Title],
-                    ChoiceKey = "2"
+                    ChoiceKey = "/AssignTeam/Join"
                 }
             }; 
             return View(viewModel); 
-        }
-
-        [HttpPost]
-        public ActionResult TwoChoice(TwoChoiceViewModel model)
-        {
-            return View(model);
         }
 
         /// <summary>

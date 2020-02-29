@@ -82,13 +82,7 @@ namespace Hackathon.Feature.Forms.SubmitActions
                 var registerResponse = loginUser.Register(email, password, firstName, lastName, twitterUser, githubUser, linkedInUser);
                 // make the sitecore user
 
-                // make the connected team member item
-                var teamsRepo = new TeamsRepository(); 
-                var newTeamMemberItem = teamsRepo.CreateHackathonTeamMember(firstName, lastName, email, githubUser);
-
-                if (newTeamMemberItem != null) { 
-                    return true;
-                }
+                return registerResponse;
             } 
 
             return false; 
