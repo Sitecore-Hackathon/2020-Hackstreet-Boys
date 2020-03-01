@@ -25,7 +25,7 @@ We hope the organizors of Sitecore hackathon love this submission as we know it 
 - Install **9.3.0 rev. 003498 (Setup XP0 Developer Workstation rev. 1.1.1-r4)** using SIA.
   - Installation/solution prefix: hackstreetsc
   - Url should be https://hackstreetsc.dev.local/
-- Install Demo Package from Sc.Package folder [Sitecore React Trackable Links Module and Demo-1.0.zip](https://github.com/Sitecore-Hackathon/2020-Hackstreet-Boys/raw/master/sc.package/Sitecore%20Hackathon%20-%20Hackstreet-Boys-1.0.zip" Sitecore Hackathon - Hackstreet-Boys-1.0.zip")  and then Select **Overwrite all**
+- Install Demo Package from Sc.Package folder [Sitecore Hackathon - Hackstreet-Boys-1.0.zip](https://github.com/Sitecore-Hackathon/2020-Hackstreet-Boys/raw/master/sc.package/Sitecore%20Hackathon%20-%20Hackstreet-Boys-1.0.zip " Sitecore Hackathon - Hackstreet-Boys-1.0.zip")  and then Select **Overwrite all**
 - Update the settings inside \App_Config\Include\Foundation\Foundation.Teams.config
   - hackathon.GithubPersonalAccessKey: Your github access account that has all scopes permissions
   - hackathon.GithubOwnerAccount: github username for the owner of the Sitecore Hackathon organization
