@@ -49,7 +49,7 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
-    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
     <PackageReference Include="Sitecore.Buckets" Version="9.3.0" />
     <PackageReference Include="Sitecore.ContentSearch" Version="9.3.0" />
     <PackageReference Include="Sitecore.ContentSearch.Linq" Version="9.3.0" />
